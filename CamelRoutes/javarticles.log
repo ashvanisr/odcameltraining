@@ -1,0 +1,499 @@
+2017-05-30 10:21:17,730 | INFO | AbstractApplicationContext.java 510 | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7dc5e7b4: startup date [Tue May 30 10:21:17 IST 2017]; root of context hierarchy
+2017-05-30 10:21:17,984 | INFO | XmlBeanDefinitionReader.java 317 | Loading XML bean definitions from class path resource [orderxmlrouteContext.xml]
+2017-05-30 10:21:22,406 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-05-30 10:21:22,416 | INFO | ManagedManagementStrategy.java 187 | JMX is enabled
+2017-05-30 10:21:23,260 | INFO | DefaultTypeConverter.java 56 | Loaded 186 type converters
+2017-05-30 10:21:23,792 | INFO | DefaultCamelContext.java 2633 | AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2017-05-30 10:21:23,792 | INFO | DefaultCamelContext.java 2643 | StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2017-05-30 10:21:23,886 | INFO | DefaultCamelContext.java 3164 | Route: route1 started and consuming from: Endpoint[direct://start]
+2017-05-30 10:21:23,902 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-05-30 10:21:23,902 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 1.496 seconds
+2017-05-30 10:21:23,902 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-05-30 10:21:23,902 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-05-30 10:21:23,902 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.000 seconds
+2017-05-30 10:21:24,058 | INFO | MarkerIgnoringBase.java 95 | Split by article Element
+2017-05-30 10:21:24,120 | INFO | XPathBuilder.java 1203 | Created default XPathFactory com.sun.org.apache.xpath.internal.jaxp.XPathFactoryImpl@1a45193b
+2017-05-30 10:21:24,964 | INFO | MarkerIgnoringBase.java 95 | <items>
+			<item>Laptop</item>
+			<item>Mobile</item>
+		</items>
+2017-05-30 10:21:24,982 | INFO | DefaultCamelContext.java 2660 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutting down
+2017-05-30 10:21:24,983 | INFO | DefaultShutdownStrategy.java 184 | Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2017-05-30 10:21:24,983 | INFO | DefaultShutdownStrategy.java 647 | Route: route1 shutdown complete, was consuming from: Endpoint[direct://start]
+2017-05-30 10:21:24,998 | INFO | DefaultShutdownStrategy.java 247 | Graceful shutdown of 1 routes completed in 0 seconds
+2017-05-30 10:21:25,014 | INFO | DefaultCamelContext.java 2745 | Apache Camel 2.15.2 (CamelContext: camel-1) uptime 1.112 seconds
+2017-05-30 10:21:25,014 | INFO | DefaultCamelContext.java 2746 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutdown in 0.032 seconds
+2017-05-30 10:22:29,125 | INFO | AbstractApplicationContext.java 510 | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7dc5e7b4: startup date [Tue May 30 10:22:29 IST 2017]; root of context hierarchy
+2017-05-30 10:22:29,217 | INFO | XmlBeanDefinitionReader.java 317 | Loading XML bean definitions from class path resource [orderxmlrouteContext.xml]
+2017-05-30 10:22:31,951 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-05-30 10:22:31,962 | INFO | ManagedManagementStrategy.java 187 | JMX is enabled
+2017-05-30 10:22:32,227 | INFO | DefaultTypeConverter.java 56 | Loaded 186 type converters
+2017-05-30 10:22:32,587 | INFO | DefaultCamelContext.java 2633 | AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2017-05-30 10:22:32,587 | INFO | DefaultCamelContext.java 2643 | StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2017-05-30 10:22:32,727 | INFO | DefaultCamelContext.java 3164 | Route: route1 started and consuming from: Endpoint[direct://start]
+2017-05-30 10:22:32,727 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-05-30 10:22:32,743 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.776 seconds
+2017-05-30 10:22:32,852 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-05-30 10:22:32,852 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-05-30 10:22:32,852 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.000 seconds
+2017-05-30 10:22:32,884 | INFO | MarkerIgnoringBase.java 95 | Split by article Element
+2017-05-30 10:22:32,899 | INFO | XPathBuilder.java 1203 | Created default XPathFactory com.sun.org.apache.xpath.internal.jaxp.XPathFactoryImpl@488eb7f2
+2017-05-30 10:22:33,056 | INFO | MarkerIgnoringBase.java 95 | <items>
+			<item>Laptop</item>
+			<item>Mobile</item>
+		</items>
+2017-05-30 10:22:33,094 | ERROR | MarkerIgnoringBase.java 159 | Failed delivery for (MessageId: ID-LP-CNU13422QW-50218-1496119951717-0-1 on ExchangeId: ID-LP-CNU13422QW-50218-1496119951717-0-2). Exhausted after delivery attempt: 1 caught: org.apache.camel.component.file.GenericFileOperationFailedException: Cannot store file: src\main\resources\orderxmlroute\ID-LP-CNU13422QW-50218-1496119951717-0-1
+
+Message History
+---------------------------------------------------------------------------------------------------------------------------------------
+RouteId              ProcessorId          Processor                                                                        Elapsed (ms)
+[route1            ] [route1            ] [direct://start                                                                ] [       210]
+[route1            ] [log1              ] [log                                                                           ] [         0]
+[route1            ] [split1            ] [split[xpath{XPath: //order[@product='electronics']/items}]                    ] [       177]
+[route1            ] [to1               ] [file:src/main/resources/orderxmlroute/                                        ] [        16]
+
+Exchange
+---------------------------------------------------------------------------------------------------------------------------------------
+Exchange[
+	Id                  ID-LP-CNU13422QW-50218-1496119951717-0-2
+	ExchangePattern     InOnly
+	Headers             {breadcrumbId=ID-LP-CNU13422QW-50218-1496119951717-0-1, CamelFileName=null, CamelRedelivered=false, CamelRedeliveryCounter=0}
+	BodyType            java.io.FileInputStream
+	Body                [Body is instance of java.io.InputStream]
+]
+
+Stacktrace
+---------------------------------------------------------------------------------------------------------------------------------------
+org.apache.camel.component.file.GenericFileOperationFailedException: Cannot store file: src\main\resources\orderxmlroute\ID-LP-CNU13422QW-50218-1496119951717-0-1
+	at org.apache.camel.component.file.FileOperations.storeFile(FileOperations.java:290)
+	at org.apache.camel.component.file.GenericFileProducer.writeFile(GenericFileProducer.java:277)
+	at org.apache.camel.component.file.GenericFileProducer.processExchange(GenericFileProducer.java:165)
+	at org.apache.camel.component.file.GenericFileProducer.process(GenericFileProducer.java:79)
+	at org.apache.camel.util.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:61)
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:129)
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:448)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:191)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:118)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:80)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:191)
+	at org.apache.camel.component.direct.DirectProducer.process(DirectProducer.java:51)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:191)
+	at org.apache.camel.util.AsyncProcessorHelper.process(AsyncProcessorHelper.java:109)
+	at org.apache.camel.processor.UnitOfWorkProducer.process(UnitOfWorkProducer.java:68)
+	at org.apache.camel.impl.ProducerCache$2.doInProducer(ProducerCache.java:375)
+	at org.apache.camel.impl.ProducerCache$2.doInProducer(ProducerCache.java:343)
+	at org.apache.camel.impl.ProducerCache.doInProducer(ProducerCache.java:233)
+	at org.apache.camel.impl.ProducerCache.sendExchange(ProducerCache.java:343)
+	at org.apache.camel.impl.ProducerCache.send(ProducerCache.java:184)
+	at org.apache.camel.impl.DefaultProducerTemplate.send(DefaultProducerTemplate.java:124)
+	at org.apache.camel.impl.DefaultProducerTemplate.sendBody(DefaultProducerTemplate.java:137)
+	at org.apache.camel.impl.DefaultProducerTemplate.sendBody(DefaultProducerTemplate.java:144)
+	at com.order.orderxmlroute.main(orderxmlroute.java:23)
+Caused by: java.io.IOException: Stream Closed
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:233)
+	at org.apache.camel.component.file.FileOperations.writeFileByStream(FileOperations.java:396)
+	at org.apache.camel.component.file.FileOperations.storeFile(FileOperations.java:274)
+	... 24 more
+2017-05-30 10:22:33,109 | INFO | DefaultCamelContext.java 2660 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutting down
+2017-05-30 10:22:33,109 | INFO | DefaultShutdownStrategy.java 184 | Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2017-05-30 10:22:33,125 | INFO | DefaultShutdownStrategy.java 647 | Route: route1 shutdown complete, was consuming from: Endpoint[direct://start]
+2017-05-30 10:22:33,125 | INFO | DefaultShutdownStrategy.java 247 | Graceful shutdown of 1 routes completed in 0 seconds
+2017-05-30 10:22:33,125 | INFO | DefaultCamelContext.java 2745 | Apache Camel 2.15.2 (CamelContext: camel-1) uptime 0.273 seconds
+2017-05-30 10:22:33,125 | INFO | DefaultCamelContext.java 2746 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutdown in 0.016 seconds
+2017-05-30 10:24:22,924 | INFO | AbstractApplicationContext.java 510 | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7dc5e7b4: startup date [Tue May 30 10:24:22 IST 2017]; root of context hierarchy
+2017-05-30 10:24:23,006 | INFO | XmlBeanDefinitionReader.java 317 | Loading XML bean definitions from class path resource [orderxmlrouteContext.xml]
+2017-05-30 10:24:25,553 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-05-30 10:24:25,561 | INFO | ManagedManagementStrategy.java 187 | JMX is enabled
+2017-05-30 10:24:25,936 | INFO | DefaultTypeConverter.java 56 | Loaded 186 type converters
+2017-05-30 10:24:26,295 | INFO | DefaultCamelContext.java 2633 | AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2017-05-30 10:24:26,295 | INFO | DefaultCamelContext.java 2643 | StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2017-05-30 10:24:26,389 | INFO | DefaultCamelContext.java 3164 | Route: route1 started and consuming from: Endpoint[direct://start]
+2017-05-30 10:24:26,389 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-05-30 10:24:26,389 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.836 seconds
+2017-05-30 10:24:26,404 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-05-30 10:24:26,404 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-05-30 10:24:26,404 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.000 seconds
+2017-05-30 10:24:26,545 | INFO | MarkerIgnoringBase.java 95 | Split by article Element
+2017-05-30 10:24:26,561 | INFO | XPathBuilder.java 1203 | Created default XPathFactory com.sun.org.apache.xpath.internal.jaxp.XPathFactoryImpl@3f0846c6
+2017-05-30 10:24:26,752 | INFO | DefaultCamelContext.java 2660 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutting down
+2017-05-30 10:24:26,768 | INFO | DefaultShutdownStrategy.java 184 | Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2017-05-30 10:24:26,768 | INFO | DefaultShutdownStrategy.java 647 | Route: route1 shutdown complete, was consuming from: Endpoint[direct://start]
+2017-05-30 10:24:26,768 | INFO | DefaultShutdownStrategy.java 247 | Graceful shutdown of 1 routes completed in 0 seconds
+2017-05-30 10:24:26,784 | INFO | DefaultCamelContext.java 2745 | Apache Camel 2.15.2 (CamelContext: camel-1) uptime 0.380 seconds
+2017-05-30 10:24:26,784 | INFO | DefaultCamelContext.java 2746 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutdown in 0.032 seconds
+2017-05-30 10:25:48,272 | INFO | AbstractApplicationContext.java 510 | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7dc5e7b4: startup date [Tue May 30 10:25:48 IST 2017]; root of context hierarchy
+2017-05-30 10:25:48,356 | INFO | XmlBeanDefinitionReader.java 317 | Loading XML bean definitions from class path resource [orderxmlrouteContext.xml]
+2017-05-30 10:25:50,810 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-05-30 10:25:50,821 | INFO | ManagedManagementStrategy.java 187 | JMX is enabled
+2017-05-30 10:25:51,196 | INFO | DefaultTypeConverter.java 56 | Loaded 186 type converters
+2017-05-30 10:25:51,759 | INFO | DefaultCamelContext.java 2633 | AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2017-05-30 10:25:51,759 | INFO | DefaultCamelContext.java 2643 | StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2017-05-30 10:25:51,852 | INFO | DefaultCamelContext.java 3164 | Route: route1 started and consuming from: Endpoint[direct://start]
+2017-05-30 10:25:51,861 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-05-30 10:25:51,863 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 1.051 seconds
+2017-05-30 10:25:51,863 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-05-30 10:25:51,863 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-05-30 10:25:51,863 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.000 seconds
+2017-05-30 10:25:52,004 | INFO | MarkerIgnoringBase.java 95 | Split by article Element
+2017-05-30 10:25:52,004 | INFO | XPathBuilder.java 1203 | Created default XPathFactory com.sun.org.apache.xpath.internal.jaxp.XPathFactoryImpl@5e81e5ac
+2017-05-30 10:25:52,192 | INFO | MarkerIgnoringBase.java 95 | <items>
+			<item>Laptop</item>
+			<item>Mobile</item>
+		</items>
+2017-05-30 10:25:52,238 | INFO | DefaultCamelContext.java 2660 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutting down
+2017-05-30 10:25:52,238 | INFO | DefaultShutdownStrategy.java 184 | Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2017-05-30 10:25:52,254 | INFO | DefaultShutdownStrategy.java 647 | Route: route1 shutdown complete, was consuming from: Endpoint[direct://start]
+2017-05-30 10:25:52,254 | INFO | DefaultShutdownStrategy.java 247 | Graceful shutdown of 1 routes completed in 0 seconds
+2017-05-30 10:25:52,270 | INFO | DefaultCamelContext.java 2745 | Apache Camel 2.15.2 (CamelContext: camel-1) uptime 0.407 seconds
+2017-05-30 10:25:52,270 | INFO | DefaultCamelContext.java 2746 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutdown in 0.032 seconds
+2017-05-30 16:56:36,164 | INFO | AbstractApplicationContext.java 510 | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7dc5e7b4: startup date [Tue May 30 16:56:36 IST 2017]; root of context hierarchy
+2017-05-30 16:56:36,316 | INFO | XmlBeanDefinitionReader.java 317 | Loading XML bean definitions from class path resource [orderxmlrouteContext.xml]
+2017-05-30 16:56:39,644 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-05-30 16:56:39,646 | INFO | ManagedManagementStrategy.java 187 | JMX is enabled
+2017-05-30 16:56:40,040 | INFO | DefaultTypeConverter.java 56 | Loaded 186 type converters
+2017-05-30 16:56:40,424 | INFO | DefaultCamelContext.java 2633 | AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2017-05-30 16:56:40,424 | INFO | DefaultCamelContext.java 2643 | StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2017-05-30 16:56:40,531 | INFO | DefaultCamelContext.java 3164 | Route: route1 started and consuming from: Endpoint[direct://start]
+2017-05-30 16:56:40,532 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-05-30 16:56:40,540 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.901 seconds
+2017-05-30 16:56:40,554 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-05-30 16:56:40,555 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-05-30 16:56:40,555 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.001 seconds
+2017-05-30 16:56:40,687 | INFO | MarkerIgnoringBase.java 95 | Split by article Element
+2017-05-30 16:56:40,730 | INFO | XPathBuilder.java 1203 | Created default XPathFactory com.sun.org.apache.xpath.internal.jaxp.XPathFactoryImpl@5e81e5ac
+2017-05-30 16:56:41,041 | INFO | MarkerIgnoringBase.java 95 | <items>
+			<item>Laptop</item>
+			<item>Mobile</item>
+		</items>
+2017-05-30 16:56:41,247 | INFO | DefaultCamelContext.java 2660 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutting down
+2017-05-30 16:56:41,248 | INFO | DefaultShutdownStrategy.java 184 | Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2017-05-30 16:56:41,249 | INFO | DefaultShutdownStrategy.java 647 | Route: route1 shutdown complete, was consuming from: Endpoint[direct://start]
+2017-05-30 16:56:41,249 | INFO | DefaultShutdownStrategy.java 247 | Graceful shutdown of 1 routes completed in 0 seconds
+2017-05-30 16:56:41,249 | INFO | DefaultCamelContext.java 2745 | Apache Camel 2.15.2 (CamelContext: camel-1) uptime 0.695 seconds
+2017-05-30 16:56:41,249 | INFO | DefaultCamelContext.java 2746 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutdown in 0.002 seconds
+2017-06-14 09:28:54,657 | INFO | AbstractApplicationContext.java 510 | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7dc5e7b4: startup date [Wed Jun 14 09:28:54 IST 2017]; root of context hierarchy
+2017-06-14 09:28:54,742 | INFO | XmlBeanDefinitionReader.java 317 | Loading XML bean definitions from class path resource [SpringXMLRouteContext.xml]
+2017-06-14 09:28:57,664 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-06-14 09:28:57,672 | INFO | ManagedManagementStrategy.java 187 | JMX is enabled
+2017-06-14 09:28:58,454 | INFO | DefaultTypeConverter.java 56 | Loaded 186 type converters
+2017-06-14 09:28:58,767 | INFO | DefaultCamelContext.java 2633 | AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2017-06-14 09:28:58,782 | INFO | DefaultCamelContext.java 2643 | StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2017-06-14 09:28:58,924 | INFO | DefaultCamelContext.java 3164 | Route: route1 started and consuming from: Endpoint[direct://SpringXMLRouteStart]
+2017-06-14 09:28:58,924 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-06-14 09:28:58,924 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 1.260 seconds
+2017-06-14 09:28:58,940 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-06-14 09:28:58,940 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-06-14 09:28:58,940 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.000 seconds
+2017-06-14 09:28:58,956 | INFO | MarkerIgnoringBase.java 95 | Split by article Element
+2017-06-14 09:28:58,956 | INFO | XPathBuilder.java 1203 | Created default XPathFactory com.sun.org.apache.xpath.internal.jaxp.XPathFactoryImpl@1cbf6e72
+2017-06-14 09:28:59,221 | INFO | MarkerIgnoringBase.java 95 | <items>
+			<item>Laptop</item>
+			<item>Mobile</item>
+		</items>
+2017-06-14 09:28:59,268 | INFO | DefaultCamelContext.java 2660 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutting down
+2017-06-14 09:28:59,268 | INFO | DefaultShutdownStrategy.java 184 | Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2017-06-14 09:28:59,284 | INFO | DefaultShutdownStrategy.java 647 | Route: route1 shutdown complete, was consuming from: Endpoint[direct://SpringXMLRouteStart]
+2017-06-14 09:28:59,284 | INFO | DefaultShutdownStrategy.java 247 | Graceful shutdown of 1 routes completed in 0 seconds
+2017-06-14 09:28:59,299 | INFO | DefaultCamelContext.java 2745 | Apache Camel 2.15.2 (CamelContext: camel-1) uptime 0.360 seconds
+2017-06-14 09:28:59,299 | INFO | DefaultCamelContext.java 2746 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutdown in 0.016 seconds
+2017-06-14 09:29:59,909 | INFO | AbstractApplicationContext.java 510 | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7dc5e7b4: startup date [Wed Jun 14 09:29:59 IST 2017]; root of context hierarchy
+2017-06-14 09:29:59,971 | INFO | XmlBeanDefinitionReader.java 317 | Loading XML bean definitions from class path resource [SpringXMLRouteContext.xml]
+2017-06-14 09:30:02,096 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-06-14 09:30:02,100 | INFO | ManagedManagementStrategy.java 187 | JMX is enabled
+2017-06-14 09:30:02,336 | INFO | DefaultTypeConverter.java 56 | Loaded 186 type converters
+2017-06-14 09:30:02,648 | INFO | DefaultCamelContext.java 2633 | AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2017-06-14 09:30:02,648 | INFO | DefaultCamelContext.java 2643 | StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2017-06-14 09:30:02,836 | INFO | DefaultCamelContext.java 3164 | Route: route1 started and consuming from: Endpoint[direct://SpringXMLRouteStart]
+2017-06-14 09:30:02,836 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-06-14 09:30:02,851 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.740 seconds
+2017-06-14 09:30:02,851 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-06-14 09:30:02,851 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-06-14 09:30:02,851 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.000 seconds
+2017-06-14 09:30:02,867 | INFO | MarkerIgnoringBase.java 95 | Split by article Element
+2017-06-14 09:30:02,883 | INFO | XPathBuilder.java 1203 | Created default XPathFactory com.sun.org.apache.xpath.internal.jaxp.XPathFactoryImpl@686449f9
+2017-06-14 09:30:03,054 | ERROR | MarkerIgnoringBase.java 159 | Failed delivery for (MessageId: ID-LP-CNU13422QW-50949-1497412801846-0-1 on ExchangeId: ID-LP-CNU13422QW-50949-1497412801846-0-2). Exhausted after delivery attempt: 1 caught: org.apache.camel.TypeConversionException: Error during type conversion from type: java.lang.String to the required type: byte[] with value [Body is instance of java.io.InputStream] due java.io.IOException: Stream Closed
+
+Message History
+---------------------------------------------------------------------------------------------------------------------------------------
+RouteId              ProcessorId          Processor                                                                        Elapsed (ms)
+[route1            ] [route1            ] [direct://SpringXMLRouteStart                                                  ] [       172]
+[route1            ] [log1              ] [log                                                                           ] [        16]
+[route1            ] [split1            ] [split[xpath{XPath: //order[@product='electronics']/items}]                    ] [       156]
+[route1            ] [to2               ] [stream:out                                                                    ] [         0]
+
+Exchange
+---------------------------------------------------------------------------------------------------------------------------------------
+Exchange[
+	Id                  ID-LP-CNU13422QW-50949-1497412801846-0-2
+	ExchangePattern     InOnly
+	Headers             {breadcrumbId=ID-LP-CNU13422QW-50949-1497412801846-0-1, CamelRedelivered=false, CamelRedeliveryCounter=0}
+	BodyType            java.io.FileInputStream
+	Body                [Body is instance of java.io.InputStream]
+]
+
+Stacktrace
+---------------------------------------------------------------------------------------------------------------------------------------
+org.apache.camel.TypeConversionException: Error during type conversion from type: java.lang.String to the required type: byte[] with value [Body is instance of java.io.InputStream] due java.io.IOException: Stream Closed
+	at org.apache.camel.impl.converter.BaseTypeConverterRegistry.createTypeConversionException(BaseTypeConverterRegistry.java:571)
+	at org.apache.camel.impl.converter.BaseTypeConverterRegistry.convertTo(BaseTypeConverterRegistry.java:129)
+	at org.apache.camel.impl.MessageSupport.getBody(MessageSupport.java:72)
+	at org.apache.camel.impl.MessageSupport.getBody(MessageSupport.java:47)
+	at org.apache.camel.component.stream.StreamProducer.writeToStream(StreamProducer.java:129)
+	at org.apache.camel.component.stream.StreamProducer.process(StreamProducer.java:79)
+	at org.apache.camel.util.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:61)
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:129)
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:448)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:191)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:118)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:80)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:191)
+	at org.apache.camel.component.direct.DirectProducer.process(DirectProducer.java:51)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:191)
+	at org.apache.camel.util.AsyncProcessorHelper.process(AsyncProcessorHelper.java:109)
+	at org.apache.camel.processor.UnitOfWorkProducer.process(UnitOfWorkProducer.java:68)
+	at org.apache.camel.impl.ProducerCache$2.doInProducer(ProducerCache.java:375)
+	at org.apache.camel.impl.ProducerCache$2.doInProducer(ProducerCache.java:343)
+	at org.apache.camel.impl.ProducerCache.doInProducer(ProducerCache.java:233)
+	at org.apache.camel.impl.ProducerCache.sendExchange(ProducerCache.java:343)
+	at org.apache.camel.impl.ProducerCache.send(ProducerCache.java:184)
+	at org.apache.camel.impl.DefaultProducerTemplate.send(DefaultProducerTemplate.java:124)
+	at org.apache.camel.impl.DefaultProducerTemplate.sendBody(DefaultProducerTemplate.java:137)
+	at org.apache.camel.impl.DefaultProducerTemplate.sendBody(DefaultProducerTemplate.java:144)
+	at com.order.SpringXMLRoute.main(SpringXMLRoute.java:23)
+Caused by: org.apache.camel.RuntimeCamelException: java.io.IOException: Stream Closed
+	at org.apache.camel.util.ObjectHelper.wrapRuntimeCamelException(ObjectHelper.java:1619)
+	at org.apache.camel.util.ObjectHelper.invokeMethod(ObjectHelper.java:1224)
+	at org.apache.camel.impl.converter.StaticMethodTypeConverter.convertTo(StaticMethodTypeConverter.java:59)
+	at org.apache.camel.impl.converter.BaseTypeConverterRegistry.doConvertTo(BaseTypeConverterRegistry.java:285)
+	at org.apache.camel.impl.converter.BaseTypeConverterRegistry.convertTo(BaseTypeConverterRegistry.java:112)
+	... 25 more
+Caused by: java.io.IOException: Stream Closed
+	at java.io.FileInputStream.available(Native Method)
+	at java.io.BufferedInputStream.available(BufferedInputStream.java:410)
+	at org.apache.camel.util.IOHelper.copy(IOHelper.java:179)
+	at org.apache.camel.util.IOHelper.copy(IOHelper.java:169)
+	at org.apache.camel.util.IOHelper.copy(IOHelper.java:165)
+	at org.apache.camel.converter.IOConverter.toBytes(IOConverter.java:412)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.camel.util.ObjectHelper.invokeMethod(ObjectHelper.java:1220)
+	... 28 more
+2017-06-14 09:30:03,054 | INFO | DefaultCamelContext.java 2660 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutting down
+2017-06-14 09:30:03,070 | INFO | DefaultShutdownStrategy.java 184 | Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2017-06-14 09:30:03,086 | INFO | DefaultShutdownStrategy.java 647 | Route: route1 shutdown complete, was consuming from: Endpoint[direct://SpringXMLRouteStart]
+2017-06-14 09:30:03,086 | INFO | DefaultShutdownStrategy.java 247 | Graceful shutdown of 1 routes completed in 0 seconds
+2017-06-14 09:30:03,101 | INFO | DefaultCamelContext.java 2745 | Apache Camel 2.15.2 (CamelContext: camel-1) uptime 0.250 seconds
+2017-06-14 09:30:03,103 | INFO | DefaultCamelContext.java 2746 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutdown in 0.047 seconds
+2017-06-14 09:30:40,373 | INFO | AbstractApplicationContext.java 510 | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7dc5e7b4: startup date [Wed Jun 14 09:30:40 IST 2017]; root of context hierarchy
+2017-06-14 09:30:40,420 | INFO | XmlBeanDefinitionReader.java 317 | Loading XML bean definitions from class path resource [SpringXMLRouteContext.xml]
+2017-06-14 09:30:42,388 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-06-14 09:30:42,400 | INFO | ManagedManagementStrategy.java 187 | JMX is enabled
+2017-06-14 09:30:42,620 | INFO | DefaultTypeConverter.java 56 | Loaded 186 type converters
+2017-06-14 09:30:42,807 | INFO | DefaultCamelContext.java 2633 | AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2017-06-14 09:30:42,807 | INFO | DefaultCamelContext.java 2643 | StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2017-06-14 09:30:42,870 | INFO | DefaultCamelContext.java 3164 | Route: route1 started and consuming from: Endpoint[direct://SpringXMLRouteStart]
+2017-06-14 09:30:42,870 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-06-14 09:30:42,885 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.482 seconds
+2017-06-14 09:30:42,885 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-06-14 09:30:42,885 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-06-14 09:30:42,885 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.000 seconds
+2017-06-14 09:30:42,901 | INFO | MarkerIgnoringBase.java 95 | Split by article Element
+2017-06-14 09:30:42,920 | INFO | DefaultCamelContext.java 2660 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutting down
+2017-06-14 09:30:42,921 | INFO | DefaultShutdownStrategy.java 184 | Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2017-06-14 09:30:42,933 | INFO | DefaultShutdownStrategy.java 647 | Route: route1 shutdown complete, was consuming from: Endpoint[direct://SpringXMLRouteStart]
+2017-06-14 09:30:42,933 | INFO | DefaultShutdownStrategy.java 247 | Graceful shutdown of 1 routes completed in 0 seconds
+2017-06-14 09:30:42,939 | INFO | DefaultCamelContext.java 2745 | Apache Camel 2.15.2 (CamelContext: camel-1) uptime 0.054 seconds
+2017-06-14 09:30:42,939 | INFO | DefaultCamelContext.java 2746 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutdown in 0.019 seconds
+2017-06-14 09:31:55,542 | INFO | AbstractApplicationContext.java 510 | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7dc5e7b4: startup date [Wed Jun 14 09:31:55 IST 2017]; root of context hierarchy
+2017-06-14 09:31:55,604 | INFO | XmlBeanDefinitionReader.java 317 | Loading XML bean definitions from class path resource [SpringXMLRouteContext.xml]
+2017-06-14 09:31:57,548 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-06-14 09:31:57,557 | INFO | ManagedManagementStrategy.java 187 | JMX is enabled
+2017-06-14 09:31:57,776 | INFO | DefaultTypeConverter.java 56 | Loaded 186 type converters
+2017-06-14 09:31:58,011 | INFO | DefaultCamelContext.java 2633 | AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2017-06-14 09:31:58,011 | INFO | DefaultCamelContext.java 2643 | StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2017-06-14 09:31:58,073 | INFO | DefaultCamelContext.java 3164 | Route: route1 started and consuming from: Endpoint[direct://SpringXMLRouteStart]
+2017-06-14 09:31:58,073 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-06-14 09:31:58,073 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.525 seconds
+2017-06-14 09:31:58,073 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-06-14 09:31:58,073 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-06-14 09:31:58,073 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.000 seconds
+2017-06-14 09:31:58,198 | INFO | MarkerIgnoringBase.java 95 | Split by article Element
+2017-06-14 09:31:58,198 | INFO | XPathBuilder.java 1203 | Created default XPathFactory com.sun.org.apache.xpath.internal.jaxp.XPathFactoryImpl@3f0846c6
+2017-06-14 09:31:58,354 | INFO | DefaultCamelContext.java 2660 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutting down
+2017-06-14 09:31:58,354 | INFO | DefaultShutdownStrategy.java 184 | Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2017-06-14 09:31:58,354 | INFO | DefaultShutdownStrategy.java 647 | Route: route1 shutdown complete, was consuming from: Endpoint[direct://SpringXMLRouteStart]
+2017-06-14 09:31:58,354 | INFO | DefaultShutdownStrategy.java 247 | Graceful shutdown of 1 routes completed in 0 seconds
+2017-06-14 09:31:58,354 | INFO | DefaultCamelContext.java 2745 | Apache Camel 2.15.2 (CamelContext: camel-1) uptime 0.281 seconds
+2017-06-14 09:31:58,354 | INFO | DefaultCamelContext.java 2746 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutdown in 0.000 seconds
+2017-06-14 09:32:28,267 | INFO | AbstractApplicationContext.java 510 | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7dc5e7b4: startup date [Wed Jun 14 09:32:28 IST 2017]; root of context hierarchy
+2017-06-14 09:32:28,314 | INFO | XmlBeanDefinitionReader.java 317 | Loading XML bean definitions from class path resource [SpringXMLRouteContext.xml]
+2017-06-14 09:32:30,173 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-06-14 09:32:30,189 | INFO | ManagedManagementStrategy.java 187 | JMX is enabled
+2017-06-14 09:32:30,409 | INFO | DefaultTypeConverter.java 56 | Loaded 186 type converters
+2017-06-14 09:32:30,659 | INFO | DefaultCamelContext.java 2633 | AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2017-06-14 09:32:30,659 | INFO | DefaultCamelContext.java 2643 | StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2017-06-14 09:32:30,722 | INFO | DefaultCamelContext.java 3164 | Route: route1 started and consuming from: Endpoint[direct://SpringXMLRouteStart]
+2017-06-14 09:32:30,722 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-06-14 09:32:30,722 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.549 seconds
+2017-06-14 09:32:30,722 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-06-14 09:32:30,722 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-06-14 09:32:30,722 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.000 seconds
+2017-06-14 09:32:30,831 | INFO | MarkerIgnoringBase.java 95 | Split by article Element
+2017-06-14 09:32:30,847 | INFO | XPathBuilder.java 1203 | Created default XPathFactory com.sun.org.apache.xpath.internal.jaxp.XPathFactoryImpl@3f0846c6
+2017-06-14 09:32:31,081 | INFO | DefaultCamelContext.java 2660 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutting down
+2017-06-14 09:32:31,081 | INFO | DefaultShutdownStrategy.java 184 | Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2017-06-14 09:32:31,097 | INFO | DefaultShutdownStrategy.java 647 | Route: route1 shutdown complete, was consuming from: Endpoint[direct://SpringXMLRouteStart]
+2017-06-14 09:32:31,097 | INFO | DefaultShutdownStrategy.java 247 | Graceful shutdown of 1 routes completed in 0 seconds
+2017-06-14 09:32:31,112 | INFO | DefaultCamelContext.java 2745 | Apache Camel 2.15.2 (CamelContext: camel-1) uptime 0.390 seconds
+2017-06-14 09:32:31,112 | INFO | DefaultCamelContext.java 2746 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutdown in 0.031 seconds
+2017-06-14 09:35:32,028 | INFO | AbstractApplicationContext.java 510 | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7dc5e7b4: startup date [Wed Jun 14 09:35:32 IST 2017]; root of context hierarchy
+2017-06-14 09:35:32,090 | INFO | XmlBeanDefinitionReader.java 317 | Loading XML bean definitions from class path resource [SpringXMLRouteContext.xml]
+2017-06-14 09:35:34,020 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-06-14 09:35:34,022 | INFO | ManagedManagementStrategy.java 187 | JMX is enabled
+2017-06-14 09:35:34,241 | INFO | DefaultTypeConverter.java 56 | Loaded 186 type converters
+2017-06-14 09:35:34,429 | INFO | DefaultCamelContext.java 2633 | AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2017-06-14 09:35:34,429 | INFO | DefaultCamelContext.java 2643 | StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2017-06-14 09:35:34,445 | INFO | XPathBuilder.java 1203 | Created default XPathFactory com.sun.org.apache.xpath.internal.jaxp.XPathFactoryImpl@681a8b4e
+2017-06-14 09:35:34,523 | INFO | DefaultCamelContext.java 3164 | Route: route1 started and consuming from: Endpoint[direct://SpringXMLRouteStart]
+2017-06-14 09:35:34,538 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-06-14 09:35:34,538 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.534 seconds
+2017-06-14 09:35:34,538 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-06-14 09:35:34,538 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-06-14 09:35:34,538 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.000 seconds
+2017-06-14 09:35:34,570 | INFO | MarkerIgnoringBase.java 95 | Split by article Element
+2017-06-14 09:35:34,726 | ERROR | MarkerIgnoringBase.java 159 | Failed delivery for (MessageId: ID-LP-CNU13422QW-51115-1497413133801-0-1 on ExchangeId: ID-LP-CNU13422QW-51115-1497413133801-0-2). Exhausted after delivery attempt: 1 caught: org.apache.camel.component.direct.DirectConsumerNotAvailableException: No consumers available on endpoint: Endpoint[direct://b]. Exchange[Message: [Body is instance of java.io.InputStream]]
+
+Message History
+---------------------------------------------------------------------------------------------------------------------------------------
+RouteId              ProcessorId          Processor                                                                        Elapsed (ms)
+[route1            ] [route1            ] [direct://SpringXMLRouteStart                                                  ] [       156]
+[route1            ] [log1              ] [log                                                                           ] [         0]
+[route1            ] [choice1           ] [when[xpath{XPath: //order[@product='electronics']/items}]choice[when[xpath{XPa] [       156]
+[route1            ] [to1               ] [direct:b                                                                      ] [         0]
+
+Exchange
+---------------------------------------------------------------------------------------------------------------------------------------
+Exchange[
+	Id                  ID-LP-CNU13422QW-51115-1497413133801-0-2
+	ExchangePattern     InOnly
+	Headers             {breadcrumbId=ID-LP-CNU13422QW-51115-1497413133801-0-1, CamelRedelivered=false, CamelRedeliveryCounter=0}
+	BodyType            java.io.FileInputStream
+	Body                [Body is instance of java.io.InputStream]
+]
+
+Stacktrace
+---------------------------------------------------------------------------------------------------------------------------------------
+org.apache.camel.component.direct.DirectConsumerNotAvailableException: No consumers available on endpoint: Endpoint[direct://b]. Exchange[Message: [Body is instance of java.io.InputStream]]
+	at org.apache.camel.component.direct.DirectProducer.process(DirectProducer.java:47)
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:129)
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:448)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:191)
+	at org.apache.camel.processor.ChoiceProcessor.process(ChoiceProcessor.java:111)
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:448)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:191)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:118)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:80)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:191)
+	at org.apache.camel.component.direct.DirectProducer.process(DirectProducer.java:51)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:191)
+	at org.apache.camel.util.AsyncProcessorHelper.process(AsyncProcessorHelper.java:109)
+	at org.apache.camel.processor.UnitOfWorkProducer.process(UnitOfWorkProducer.java:68)
+	at org.apache.camel.impl.ProducerCache$2.doInProducer(ProducerCache.java:375)
+	at org.apache.camel.impl.ProducerCache$2.doInProducer(ProducerCache.java:343)
+	at org.apache.camel.impl.ProducerCache.doInProducer(ProducerCache.java:233)
+	at org.apache.camel.impl.ProducerCache.sendExchange(ProducerCache.java:343)
+	at org.apache.camel.impl.ProducerCache.send(ProducerCache.java:184)
+	at org.apache.camel.impl.DefaultProducerTemplate.send(DefaultProducerTemplate.java:124)
+	at org.apache.camel.impl.DefaultProducerTemplate.sendBody(DefaultProducerTemplate.java:137)
+	at org.apache.camel.impl.DefaultProducerTemplate.sendBody(DefaultProducerTemplate.java:144)
+	at com.order.SpringXMLRoute.main(SpringXMLRoute.java:23)
+2017-06-14 09:35:34,741 | INFO | DefaultCamelContext.java 2660 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutting down
+2017-06-14 09:35:34,741 | INFO | DefaultShutdownStrategy.java 184 | Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2017-06-14 09:35:34,757 | INFO | DefaultShutdownStrategy.java 647 | Route: route1 shutdown complete, was consuming from: Endpoint[direct://SpringXMLRouteStart]
+2017-06-14 09:35:34,757 | INFO | DefaultShutdownStrategy.java 247 | Graceful shutdown of 1 routes completed in 0 seconds
+2017-06-14 09:35:34,757 | INFO | DefaultCamelContext.java 2745 | Apache Camel 2.15.2 (CamelContext: camel-1) uptime 0.219 seconds
+2017-06-14 09:35:34,757 | INFO | DefaultCamelContext.java 2746 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutdown in 0.016 seconds
+2017-06-14 09:52:28,678 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-06-14 09:52:28,691 | INFO | ManagedManagementStrategy.java 187 | JMX is enabled
+2017-06-14 09:52:29,145 | INFO | DefaultTypeConverter.java 56 | Loaded 186 type converters
+2017-06-14 09:52:29,332 | INFO | DefaultCamelContext.java 2633 | AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2017-06-14 09:52:29,332 | INFO | DefaultCamelContext.java 2643 | StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2017-06-14 09:52:29,395 | INFO | DefaultCamelContext.java 3164 | Route: route1 started and consuming from: Endpoint[direct://JavaDSLRouteStart]
+2017-06-14 09:52:29,395 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-06-14 09:52:29,395 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.717 seconds
+2017-06-14 09:52:29,426 | INFO | DefaultCamelContext.java 2660 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutting down
+2017-06-14 09:52:29,426 | INFO | DefaultShutdownStrategy.java 184 | Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2017-06-14 09:52:29,442 | INFO | DefaultShutdownStrategy.java 647 | Route: route1 shutdown complete, was consuming from: Endpoint[direct://JavaDSLRouteStart]
+2017-06-14 09:52:29,442 | INFO | DefaultShutdownStrategy.java 247 | Graceful shutdown of 1 routes completed in 0 seconds
+2017-06-14 09:52:29,442 | INFO | DefaultCamelContext.java 2745 | Apache Camel 2.15.2 (CamelContext: camel-1) uptime 0.764 seconds
+2017-06-14 09:52:29,442 | INFO | DefaultCamelContext.java 2746 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutdown in 0.016 seconds
+2017-06-14 09:55:51,692 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-06-14 09:55:51,702 | INFO | ManagedManagementStrategy.java 187 | JMX is enabled
+2017-06-14 09:55:52,045 | INFO | DefaultTypeConverter.java 56 | Loaded 186 type converters
+2017-06-14 09:55:52,233 | INFO | DefaultCamelContext.java 2633 | AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2017-06-14 09:55:52,233 | INFO | DefaultCamelContext.java 2643 | StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2017-06-14 09:55:52,311 | INFO | DefaultCamelContext.java 3164 | Route: route1 started and consuming from: Endpoint[direct://JavaDSLRouteStart]
+2017-06-14 09:55:52,311 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-06-14 09:55:52,311 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.635 seconds
+2017-06-14 09:55:52,342 | INFO | DefaultCamelContext.java 2660 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutting down
+2017-06-14 09:55:52,342 | INFO | DefaultShutdownStrategy.java 184 | Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2017-06-14 09:55:52,358 | INFO | DefaultShutdownStrategy.java 647 | Route: route1 shutdown complete, was consuming from: Endpoint[direct://JavaDSLRouteStart]
+2017-06-14 09:55:52,358 | INFO | DefaultShutdownStrategy.java 247 | Graceful shutdown of 1 routes completed in 0 seconds
+2017-06-14 09:55:52,358 | INFO | DefaultCamelContext.java 2745 | Apache Camel 2.15.2 (CamelContext: camel-1) uptime 0.682 seconds
+2017-06-14 09:55:52,358 | INFO | DefaultCamelContext.java 2746 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutdown in 0.016 seconds
+2017-06-14 09:57:05,334 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-06-14 09:57:05,343 | INFO | ManagedManagementStrategy.java 187 | JMX is enabled
+2017-06-14 09:57:05,672 | INFO | DefaultTypeConverter.java 56 | Loaded 186 type converters
+2017-06-14 09:57:05,781 | INFO | DefaultCamelContext.java 2660 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutting down
+2017-06-14 09:57:05,797 | INFO | DefaultCamelContext.java 2745 | Apache Camel 2.15.2 (CamelContext: camel-1) uptime 0.463 seconds
+2017-06-14 09:57:05,797 | INFO | DefaultCamelContext.java 2746 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutdown in 0.000 seconds
+2017-06-14 09:58:51,109 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-06-14 09:58:51,120 | INFO | ManagedManagementStrategy.java 187 | JMX is enabled
+2017-06-14 09:58:51,480 | INFO | DefaultTypeConverter.java 56 | Loaded 186 type converters
+2017-06-14 09:58:51,715 | INFO | DefaultCamelContext.java 2633 | AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2017-06-14 09:58:51,715 | INFO | DefaultCamelContext.java 2643 | StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2017-06-14 09:58:51,793 | INFO | DefaultCamelContext.java 3164 | Route: route1 started and consuming from: Endpoint[direct://JavaDSLRouteStart]
+2017-06-14 09:58:51,793 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-06-14 09:58:51,809 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.684 seconds
+2017-06-14 09:58:51,933 | INFO | DefaultCamelContext.java 2660 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutting down
+2017-06-14 09:58:51,936 | INFO | DefaultShutdownStrategy.java 184 | Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2017-06-14 09:58:51,962 | INFO | DefaultShutdownStrategy.java 647 | Route: route1 shutdown complete, was consuming from: Endpoint[direct://JavaDSLRouteStart]
+2017-06-14 09:58:51,962 | INFO | DefaultShutdownStrategy.java 247 | Graceful shutdown of 1 routes completed in 0 seconds
+2017-06-14 09:58:51,971 | INFO | DefaultCamelContext.java 2745 | Apache Camel 2.15.2 (CamelContext: camel-1) uptime 0.862 seconds
+2017-06-14 09:58:51,972 | INFO | DefaultCamelContext.java 2746 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutdown in 0.038 seconds
+2017-06-14 10:01:55,938 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2017-06-14 10:01:55,957 | INFO | ManagedManagementStrategy.java 187 | JMX is enabled
+2017-06-14 10:01:56,302 | INFO | DefaultTypeConverter.java 56 | Loaded 186 type converters
+2017-06-14 10:01:56,505 | INFO | DefaultCamelContext.java 2633 | AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2017-06-14 10:01:56,505 | INFO | DefaultCamelContext.java 2643 | StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2017-06-14 10:01:56,583 | INFO | DefaultCamelContext.java 3164 | Route: route1 started and consuming from: Endpoint[direct://JavaDSLRouteStart]
+2017-06-14 10:01:56,583 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2017-06-14 10:01:56,583 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.645 seconds
+2017-06-14 10:01:56,614 | INFO | XPathBuilder.java 1203 | Created default XPathFactory com.sun.org.apache.xpath.internal.jaxp.XPathFactoryImpl@2f7c2f4f
+2017-06-14 10:01:56,755 | INFO | DefaultCamelContext.java 2660 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutting down
+2017-06-14 10:01:56,755 | INFO | DefaultShutdownStrategy.java 184 | Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2017-06-14 10:01:56,771 | INFO | DefaultShutdownStrategy.java 647 | Route: route1 shutdown complete, was consuming from: Endpoint[direct://JavaDSLRouteStart]
+2017-06-14 10:01:56,771 | INFO | DefaultShutdownStrategy.java 247 | Graceful shutdown of 1 routes completed in 0 seconds
+2017-06-14 10:01:56,771 | INFO | DefaultCamelContext.java 2745 | Apache Camel 2.15.2 (CamelContext: camel-1) uptime 0.833 seconds
+2017-06-14 10:01:56,771 | INFO | DefaultCamelContext.java 2746 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutdown in 0.016 seconds
+2018-07-31 11:11:12,252 | INFO | DefaultCamelContext.java 2418 | Apache Camel 2.15.2 (CamelContext: camel-1) is starting
+2018-07-31 11:11:12,256 | INFO | ManagedManagementStrategy.java 187 | JMX is enabled
+2018-07-31 11:11:12,511 | INFO | DefaultTypeConverter.java 56 | Loaded 186 type converters
+2018-07-31 11:11:12,625 | INFO | DefaultCamelContext.java 2633 | AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2018-07-31 11:11:12,626 | INFO | DefaultCamelContext.java 2643 | StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2018-07-31 11:11:12,659 | INFO | DefaultCamelContext.java 3164 | Route: route1 started and consuming from: Endpoint[direct://JavaDSLRouteStart]
+2018-07-31 11:11:12,659 | INFO | DefaultCamelContext.java 2453 | Total 1 routes, of which 1 is started.
+2018-07-31 11:11:12,661 | INFO | DefaultCamelContext.java 2454 | Apache Camel 2.15.2 (CamelContext: camel-1) started in 0.410 seconds
+2018-07-31 11:11:12,677 | INFO | DefaultCamelContext.java 2660 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutting down
+2018-07-31 11:11:12,677 | INFO | DefaultShutdownStrategy.java 184 | Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2018-07-31 11:11:12,683 | INFO | DefaultShutdownStrategy.java 647 | Route: route1 shutdown complete, was consuming from: Endpoint[direct://JavaDSLRouteStart]
+2018-07-31 11:11:12,684 | INFO | DefaultShutdownStrategy.java 247 | Graceful shutdown of 1 routes completed in 0 seconds
+2018-07-31 11:11:12,689 | INFO | DefaultCamelContext.java 2745 | Apache Camel 2.15.2 (CamelContext: camel-1) uptime 0.440 seconds
+2018-07-31 11:11:12,689 | INFO | DefaultCamelContext.java 2746 | Apache Camel 2.15.2 (CamelContext: camel-1) is shutdown in 0.012 seconds

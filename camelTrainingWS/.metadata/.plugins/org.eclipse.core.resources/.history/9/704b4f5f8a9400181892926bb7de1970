@@ -1,0 +1,22 @@
+package com.javainuse;
+
+
+import org.apache.camel.builder.RouteBuilder;
+import org.springframework.stereotype.Component;
+ 
+@Component
+public class MyRouteRouter extends RouteBuilder {
+ 
+    @Override
+    public void configure() throws Exception {
+    	from("file:D://projects//springboot-camel//src//main//resources//input?noop=true").split(xpath("//orders/order"))
+    	.log(">>> ${body}")
+    	.choice().when(
+    			xpath("//order[@product='electronics']/items")
+    			)
+    	.to("file:D://projects//springboot-camel//src//main//resources//output").when(
+    			xpath("//order[@product='books']/items")
+    			)
+    	.to("file:D://projects//springboot-camel//src//main//resources//output2").end();
+    }
+}
