@@ -1,0 +1,7 @@
+git init
+git status
+git add *
+git commit -m"commit message"
+git remote add origin https://github.com/ashvanisr/odcameltraining.git
+git pull origin master --allow-unrelated-histories
+git push origin master
