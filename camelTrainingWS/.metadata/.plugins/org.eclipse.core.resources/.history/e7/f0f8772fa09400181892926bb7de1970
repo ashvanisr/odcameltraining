@@ -1,0 +1,32 @@
+package com.od;
+
+
+import org.apache.camel.builder.RouteBuilder;
+import org.springframework.stereotype.Component;
+ 
+@Component
+public class MyRouteQuartzRouter extends RouteBuilder {
+ 
+    @Override
+    public void configure() throws Exception {
+    	
+    	from("quartz://currentTimer?trigger.repeatInterval=1000&trigger.repeatCount=5").
+    	to("direct");
+
+    	from("file:D://projects//springboot-camel//src//main//resources//input/quartz?noop=true")
+    	.log("complete File >>> ${body}")
+    	.split(xpath("//orders/order"))
+    	.log("split File >>> ${body}")
+    	.choice().when(
+    			xpath("//order[@product='electronics']/items")
+    			)
+    	//.log("File1>>> ${body}")
+    	//.to("file://C:/out/?fileName=MyFile.txt&charset=utf-8"
+    	.to("file:D://projects//springboot-camel//src//main//resources//output//quartz")
+    	.when(
+    			xpath("//order[@product='books']/items")
+    			)
+    	//.log("File2>>> ${body}")
+    	.to("file:D://projects//springboot-camel//src//main//resources//output2/quartz?fileName=book.txt&charset=utf-8").end();
+    }
+}

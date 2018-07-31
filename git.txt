@@ -5,3 +5,6 @@ git commit -m"commit message"
 git remote add origin https://github.com/ashvanisr/odcameltraining.git
 git pull origin master --allow-unrelated-histories
 git push origin master
+
+git tag camel_training_withoutspringboot_v1
+git push origin camel_training_withoutspringboot_v1

@@ -1,0 +1,59 @@
+package  com.camelrouting;
+
+import java.io.FileInputStream;
+import java.io.InputStream;
+
+import org.apache.camel.CamelContext;
+import org.apache.camel.Exchange;
+import org.apache.camel.Processor;
+import org.apache.camel.ProducerTemplate;
+import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.impl.DefaultCamelContext;
+import org.apache.camel.processor.aggregate.AggregationStrategy;
+
+public class ContentEnricherRoute {
+	
+	public static void main(String[] args) throws Exception {
+		CamelContext context = new DefaultCamelContext();
+		
+		try {
+			/*context.addComponent("activemq", ActiveMQComponent.activeMQComponent("vm://localhost?broker.persistent=false"));*/
+			
+			context.addRoutes(new RouteBuilder() {
+				@Override
+				public void configure() throws Exception {
+					getContext().setTracing(true);
+				    from("direct:start").enrich("direct:enrich", new AggregationStrategy() {
+
+				        public Exchange aggregate(Exchange first, Exchange second) {
+				            if (second != null) {
+				                Object firstBody = first.getIn().getBody();
+				                Object secondBody = second.getIn().getBody();
+				                second.getOut().setBody(firstBody + "\n---\n" + secondBody);
+				            }
+				            return second;
+				        }
+				    }).to("log:enricheded").to("mock:result");
+				    from("direct:enrich").process(new Processor() {
+
+				        public void process(Exchange exchange) throws Exception {
+				            String s = exchange.getIn().getBody(String.class);
+				            exchange.getOut().setBody(s + " again...");
+				        }
+				    }).to("log:processed");
+
+				}
+				
+			});
+			
+			
+			
+			context.start();
+			ProducerTemplate template = context.createProducerTemplate();
+			InputStream orderxml = new FileInputStream("src/main/resources/order.xml");
+			template.sendBody("direct:JavaDSLRouteStart", orderxml);
+		} finally {
+			context.stop();
+		}
+	}
+}

@@ -1,0 +1,29 @@
+package com.camelrouting;
+
+import java.io.FileInputStream;
+import java.io.InputStream;
+
+import org.apache.camel.CamelContext;
+import org.apache.camel.ProducerTemplate;
+import org.apache.camel.spring.SpringCamelContext;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class SpringCOntentBasedRoutingXMLRoute {
+
+	public static void main(String[] args) throws Exception { 
+	ApplicationContext appContext = new ClassPathXmlApplicationContext(
+            "SpringXMLEnrichRouteContext.xml");
+    CamelContext camelContext = SpringCamelContext.springCamelContext(
+            appContext, false);
+    try {            
+        camelContext.start();
+        ProducerTemplate template = camelContext.createProducerTemplate();
+        template.sendBody("direct:start", "hello");
+    } finally {
+        camelContext.stop();
+    }
+
+	}
+
+}

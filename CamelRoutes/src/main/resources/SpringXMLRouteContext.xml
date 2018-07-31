@@ -32,10 +32,10 @@
 			<log message="Split by article Element"/>
 			
 			<!--To printout the filter routing message to the external file  -->
-			<!-- <split>
-				<xpath>//order[@product='electronics']/items</xpath>
+			<split>
+				<xpath>//orders/order</xpath>
 				<to uri="file:src/main/resources/orderxmlroute/"  />
-			</split> -->
+			</split> 
 			
 			
 			<!--To send the filter routing message to the Messaging Queue  -->

@@ -1,0 +1,24 @@
+package com.camelrouting;
+
+import org.apache.camel.component.mock.MockEndpoint;
+import org.apache.camel.Exchange;
+import org.apache.camel.Processor;
+import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.component.mock.MockEndpoint;
+import org.apache.camel.processor.aggregate.AggregationStrategy;
+import org.apache.camel.test.junit4.CamelTestSupport;
+import org.junit.Test;
+
+public class CamelEipEnricherTest extends CamelTestSupport {
+
+    @Test
+    public  void testEnrich() throws Exception {
+        MockEndpoint mock = getMockEndpoint("mock:result");
+        mock.expectedMessageCount(1);
+
+        template.sendBody("direct:start", "Hello world");
+        
+        assertMockEndpointsSatisfied();
+
+    }
+}
