@@ -8,3 +8,6 @@ git push origin master
 
 git tag camel_training_withoutspringboot_v1
 git push origin camel_training_withoutspringboot_v1
+
+reverting files from git to local:
+git checkout origin/master springboot-camel/pom.xml

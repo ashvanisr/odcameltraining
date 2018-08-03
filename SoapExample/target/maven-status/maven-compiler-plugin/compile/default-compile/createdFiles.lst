@@ -1,0 +1,7 @@
+com\javainuse\ObjectFactory.class
+com\javainuse\package-info.class
+com\javainuse\SOATestEndpoint.class
+com\javainuse\InputSOATest.class
+com\javainuse\OutputSOATest.class
+com\javainuse\SOATestEndpointService.class
+com\javainuse\beans\CamelProcessor.class

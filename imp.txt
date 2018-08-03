@@ -2,3 +2,10 @@ httpswww.javatips.netapiorg.apache.camel.processor.aggregate.aggregationstrategy
 
 Main Code:
 https://github.com/apache/camel/tree/master/camel-core/src/main/java/org/apache/camel
+
+
+Good Active MQ Example:
+http://www.javainuse.com/camel/camelTest
+
+SpringBoot Test example:
+http://camel.apache.org/spring-boot.html

@@ -1,0 +1,11 @@
+com\codenotfound\types\helloworld\ObjectFactory.class
+com\codenotfound\SpringCxfApplication.class
+com\codenotfound\services\helloworld\HelloWorldService.class
+com\codenotfound\services\helloworld\HelloWorldPortType.class
+com\codenotfound\endpoint\HelloWorldImpl.class
+com\codenotfound\types\helloworld\Greeting.class
+com\codenotfound\endpoint\EndpointConfig.class
+com\codenotfound\types\helloworld\package-info.class
+com\codenotfound\client\ClientConfig.class
+com\codenotfound\client\HelloWorldClient.class
+com\codenotfound\types\helloworld\Person.class

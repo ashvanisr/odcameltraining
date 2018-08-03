@@ -11,6 +11,7 @@ public class MyRouteQuartzRouter extends RouteBuilder {
     public void configure() throws Exception {
     	
     	from("file:D://projects//springboot-camel//src//main//resources//input/quartz?noop=true")
+    	.routeId("MyRouteID")
     	.log("complete File >>> ${body}")
     	.split(xpath("//orders/order"))
     	.log("split File >>> ${body}")

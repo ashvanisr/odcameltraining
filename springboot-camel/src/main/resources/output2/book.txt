@@ -1,6 +1,0 @@
-<order product="books">
-		<items>
-			<item>Design Patterns</item>
-			<item>XML</item>
-		</items>
-	</order>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="CamelEipEnricherTest" project="camelContentBasedRouting" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="com.camelrouting.CamelEipEnricherTest" time="2.291">
-    <testcase name="testEnrich" classname="com.camelrouting.CamelEipEnricherTest" time="2.291"/>
-  </testsuite>
-</testrun>
