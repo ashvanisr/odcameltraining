@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="ad3a6dfc-5756-44c7-a27c-9064775aa33f" created="2.4.0" activeEnvironment="Default environment" name="SOAP Project 1" resourceRoot="" updated="2.4.0 2018-06-08T12:50:23Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:WsdlInterface" id="655e4de8-55d4-4d7b-88e8-74f2f90ef365" wsaVersion="NONE" name="CustomerServiceServiceSoapBinding" type="wsdl" bindingName="{http://customerservice.notsoclever.cc/}CustomerServiceServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="file:/D:/projects/camel-cxf-wsdl-first-spring-boot/server/src/main/resources/CustomerService.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="file:/D:/projects/camel-cxf-wsdl-first-spring-boot/server/src/main/resources/CustomerService.wsdl">
+      <con:part>
+        <con:url>file:/D:/projects/camel-cxf-wsdl-first-spring-boot/server/src/main/resources/CustomerService.wsdl</con:url>
+        <con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements. See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership. The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License. You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied. See the License for the
+  specific language governing permissions and limitations
+  under the License.-->
+<wsdl:definitions name="CustomerServiceService" targetNamespace="http://customerservice.notsoclever.cc/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://customerservice.notsoclever.cc/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://customerservice.notsoclever.cc/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="getCustomersByName" type="tns:getCustomersByName"/>
+      <xs:element name="updateCustomer" type="tns:updateCustomer"/>
+      <xs:element name="updateCustomerResponse" type="tns:updateCustomerResponse"/>
+      <xs:element name="getCustomersByNameResponse" type="tns:getCustomersByNameResponse"/>
+      <xs:complexType name="customer">
+        <xs:sequence>
+          <xs:element name="customerId" type="xs:int"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="address" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="numOrders" type="xs:int"/>
+          <xs:element name="revenue" type="xs:double"/>
+          <xs:element minOccurs="0" name="test" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="birthDate" type="xs:date"/>
+          <xs:element minOccurs="0" name="type" type="tns:customerType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateCustomer">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="customer" type="tns:customer"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateCustomerResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:customer"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getCustomersByName">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getCustomersByNameResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:customer"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="customerType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="PRIVATE"/>
+          <xs:enumeration value="BUSINESS"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="NoSuchCustomer" type="tns:NoSuchCustomer"/>
+      <xs:complexType name="NoSuchCustomer">
+        <xs:sequence>
+          <xs:element name="customerName" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="updateCustomerResponse">
+    <wsdl:part name="parameters" element="tns:updateCustomerResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateCustomer">
+    <wsdl:part name="parameters" element="tns:updateCustomer"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCustomersByNameResponse">
+    <wsdl:part name="parameters" element="tns:getCustomersByNameResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCustomersByName">
+    <wsdl:part name="parameters" element="tns:getCustomersByName"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="NoSuchCustomerException">
+    <wsdl:part name="NoSuchCustomerException" element="tns:NoSuchCustomer"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CustomerService">
+    <wsdl:operation name="getCustomersByName">
+      <wsdl:input name="getCustomersByName" message="tns:getCustomersByName"></wsdl:input>
+      <wsdl:output name="getCustomersByNameResponse" message="tns:getCustomersByNameResponse"></wsdl:output>
+      <wsdl:fault name="NoSuchCustomerException" message="tns:NoSuchCustomerException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateCustomer">
+      <wsdl:input name="updateCustomer" message="tns:updateCustomer"></wsdl:input>
+      <wsdl:output name="updateCustomerResponse" message="tns:updateCustomerResponse"></wsdl:output>
+      <wsdl:fault name="NoSuchCustomerException" message="tns:NoSuchCustomerException"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CustomerServiceServiceSoapBinding" type="tns:CustomerService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="updateCustomer">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateCustomer">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateCustomerResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="NoSuchCustomerException">
+        <soap:fault name="NoSuchCustomerException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomersByName">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCustomersByName">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCustomersByNameResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="NoSuchCustomerException">
+        <soap:fault name="NoSuchCustomerException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CustomerServiceService">
+    <wsdl:port name="CustomerServicePort" binding="tns:CustomerServiceServiceSoapBinding">
+      <!--embedded deployment-->
+      <soap:address location="http://localhost:9090/CustomerServicePort"/>
+      <!--Tomcat deployment, embedded or standalone-->
+      <!--soap:address location="http://localhost:8080/wsdl_first/services/CustomerServicePort"/-->
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>http://localhost:9090/CustomerServicePort</con:endpoint>
+    </con:endpoints>
+    <con:operation id="fbdbff84-6ebe-405f-9ac7-d5c5f33a9806" isOneWay="false" action="" name="getCustomersByName" bindingOperationName="getCustomersByName" type="Request-Response" outputName="getCustomersByNameResponse" inputName="getCustomersByName" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="3166be8d-8b0c-4939-a2cb-4aa9899c06a1" name="Request 1">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://localhost:9090/CustomerServicePort</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cus="http://customerservice.notsoclever.cc/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <cus:getCustomersByName>\r
+         <!--Optional:-->\r
+         <name>?</name>\r
+      </cus:getCustomersByName>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://customerservice.notsoclever.cc/CustomerService/getCustomersByName"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="05c90727-9944-4ad3-aa25-825505544f1d" isOneWay="false" action="" name="updateCustomer" bindingOperationName="updateCustomer" type="Request-Response" outputName="updateCustomerResponse" inputName="updateCustomer" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="c01ff8e3-b474-4b5a-9bef-b2d78ee8440f" name="Request 1">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://localhost:9090/CustomerServicePort</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cus="http://customerservice.notsoclever.cc/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <cus:updateCustomer>\r
+         <!--Optional:-->\r
+         <customer>\r
+            <customerId>?</customerId>\r
+            <!--Optional:-->\r
+            <name>?</name>\r
+            <!--Zero or more repetitions:-->\r
+            <address>?</address>\r
+            <!--Optional:-->\r
+            <numOrders>?</numOrders>\r
+            <revenue>?</revenue>\r
+            <!--Optional:-->\r
+            <test>?</test>\r
+            <!--Optional:-->\r
+            <birthDate>?</birthDate>\r
+            <!--Optional:-->\r
+            <type>?</type>\r
+         </customer>\r
+      </cus:updateCustomer>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://customerservice.notsoclever.cc/CustomerService/updateCustomer"/>
+      </con:call>
+    </con:operation>
+  </con:interface>
+  <con:testSuite id="4c50beca-8fd6-404a-a18d-2554b14e9a09" name="CustomerServiceServiceSoapBinding TestSuite">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="ec4a2f72-9eb3-4cec-bdd3-7ab16763da84" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="getCustomersByName TestCase" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="request" id="e1f68828-ee08-4eb5-bfbd-defd4fb27f0e" name="getCustomersByName">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CustomerServiceServiceSoapBinding</con:interface>
+          <con:operation>getCustomersByName</con:operation>
+          <con:request name="getCustomersByName" id="df77fdf5-8c1e-42ce-891d-0ed4927cb19c">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost:8091/service/CustomerServicePort</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cus="http://customerservice.notsoclever.cc/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <cus:getCustomersByName>
+         <!--Optional:-->
+         <name>Johns</name>
+      </cus:getCustomersByName>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:wsaConfig action="http://customerservice.notsoclever.cc/CustomerService/getCustomersByName" mustUnderstand="NONE" version="200508"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="d1827b73-3fa8-4901-8fa3-63552fa72448" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="updateCustomer TestCase" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="request" id="841b6b9d-2f5e-4b80-8876-f9db097e17af" name="updateCustomer">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CustomerServiceServiceSoapBinding</con:interface>
+          <con:operation>updateCustomer</con:operation>
+          <con:request name="updateCustomer" id="a47dbf75-c761-41fe-bfc4-1dab655bf829">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost:8091/service/CustomerServicePort</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cus="http://customerservice.notsoclever.cc/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <cus:updateCustomer>
+         <!--Optional:-->
+         <customer>
+            <customerId>0</customerId>
+            <!--Optional:-->
+            <name>Johns, Marvin</name>
+            <!--Zero or more repetitions:-->
+            <address>a1501</address>
+            <!--Optional:-->
+            <numOrders>125</numOrders>
+            <revenue>600</revenue>
+            <!--Optional:-->
+            <test>200</test>
+            <!--Optional:-->
+            <birthDate>2018-08-15+05:00</birthDate>
+            <!--Optional:-->
+            <type>BUSINESS</type>
+         </customer>
+      </cus:updateCustomer>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:wsaConfig action="http://customerservice.notsoclever.cc/CustomerService/updateCustomer" mustUnderstand="NONE" version="200508"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// def token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// def token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// def headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>
