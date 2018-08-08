@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="fb792534-0399-45b6-a8fe-b9f2d3192010" created="2.4.0" activeEnvironment="Default environment" name="SOAP Project 1" resourceRoot="" updated="2.4.0 2018-06-08T12:50:23Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:WsdlInterface" id="6403e3df-54ff-4441-837b-d3952cd7b5d6" wsaVersion="NONE" name="ApiGatewaySoapBinding" type="wsdl" bindingName="{http://server.wsdlfirst.cxf.examples.notsoclever.cc/}ApiGatewaySoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8092/service/apigateway?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="http://localhost:8092/service/apigateway?wsdl">
+      <con:part>
+        <con:url>http://localhost:8092/service/apigateway?wsdl</con:url>
+        <con:content><![CDATA[<wsdl:definitions name="ApiGateway" targetNamespace="http://server.wsdlfirst.cxf.examples.notsoclever.cc/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://server.wsdlfirst.cxf.examples.notsoclever.cc/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://server.wsdlfirst.cxf.examples.notsoclever.cc/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="order">
+        <xs:sequence>
+          <xs:element name="amount" type="xs:int"/>
+          <xs:element minOccurs="0" name="book" type="tns:book"/>
+          <xs:element name="id" type="xs:int"/>
+          <xs:element name="processed" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="book">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="description" type="xs:string"/>
+          <xs:element name="id" type="xs:int"/>
+          <xs:element minOccurs="0" name="item" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="findAllOrders" type="tns:findAllOrders"/>
+      <xs:complexType name="findAllOrders">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="arg0" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="findAllOrdersResponse" type="tns:findAllOrdersResponse"/>
+      <xs:complexType name="findAllOrdersResponse">
+        <xs:sequence>
+          <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="return" type="tns:order"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="saveOrder" type="tns:saveOrder"/>
+      <xs:complexType name="saveOrder">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="arg0" type="tns:order"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="saveOrderResponse" type="tns:saveOrderResponse"/>
+      <xs:complexType name="saveOrderResponse">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="return" type="tns:order"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="saveOrderResponse">
+    <wsdl:part element="tns:saveOrderResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findAllOrders">
+    <wsdl:part element="tns:findAllOrders" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveOrder">
+    <wsdl:part element="tns:saveOrder" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findAllOrdersResponse">
+    <wsdl:part element="tns:findAllOrdersResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ApiGatewayPortType">
+    <wsdl:operation name="findAllOrders">
+      <wsdl:input message="tns:findAllOrders" name="findAllOrders"></wsdl:input>
+      <wsdl:output message="tns:findAllOrdersResponse" name="findAllOrdersResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveOrder">
+      <wsdl:input message="tns:saveOrder" name="saveOrder"></wsdl:input>
+      <wsdl:output message="tns:saveOrderResponse" name="saveOrderResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ApiGatewaySoapBinding" type="tns:ApiGatewayPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="findAllOrders">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findAllOrders">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findAllOrdersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveOrder">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="saveOrder">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="saveOrderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ApiGateway">
+    <wsdl:port binding="tns:ApiGatewaySoapBinding" name="ApiGatewayPort">
+      <soap:address location="http://localhost:8092/service/apigateway"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>http://localhost:8092/service/apigateway</con:endpoint>
+    </con:endpoints>
+    <con:operation id="551b121b-55d2-44c4-8196-0958e9d18953" isOneWay="false" action="" name="findAllOrders" bindingOperationName="findAllOrders" type="Request-Response" outputName="findAllOrdersResponse" inputName="findAllOrders" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="eeb11a2b-d182-4fcb-a840-0c1b14797aad" name="Request 1">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://localhost:8092/service/apigateway</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://server.wsdlfirst.cxf.examples.notsoclever.cc/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:findAllOrders>\r
+         <!--Optional:-->\r
+         <ser:arg0>?</ser:arg0>\r
+      </ser:findAllOrders>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://server.wsdlfirst.cxf.examples.notsoclever.cc/ApiGatewayPortType/findAllOrders"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="253d148a-c385-46df-afca-1aeb3a836039" isOneWay="false" action="" name="saveOrder" bindingOperationName="saveOrder" type="Request-Response" outputName="saveOrderResponse" inputName="saveOrder" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="100cb4e6-63ba-4289-943b-ca5e0a94c7fb" name="Request 1">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://localhost:8092/service/apigateway</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://server.wsdlfirst.cxf.examples.notsoclever.cc/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:saveOrder>\r
+         <!--Optional:-->\r
+         <ser:arg0>\r
+            <amount>?</amount>\r
+            <!--Optional:-->\r
+            <book>\r
+               <!--Optional:-->\r
+               <description>?</description>\r
+               <id>?</id>\r
+               <!--Optional:-->\r
+               <item>?</item>\r
+            </book>\r
+            <id>?</id>\r
+            <processed>?</processed>\r
+         </ser:arg0>\r
+      </ser:saveOrder>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://server.wsdlfirst.cxf.examples.notsoclever.cc/ApiGatewayPortType/saveOrder"/>
+      </con:call>
+    </con:operation>
+  </con:interface>
+  <con:testSuite id="6ce9331c-0ecf-4e6d-a91e-39c61143de10" name="ApiGatewaySoapBinding TestSuite">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="8a5d6a04-24ac-41cc-b22d-c9faae99f835" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="findAllOrders TestCase" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="request" id="bca09423-98ec-4fcf-8452-64b03a7e24ea" name="findAllOrders">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>ApiGatewaySoapBinding</con:interface>
+          <con:operation>findAllOrders</con:operation>
+          <con:request name="findAllOrders" id="857b80b8-475b-45b5-a5c3-2fac39e9bf80">
+            <con:settings/>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost:8092/service/apigateway</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://server.wsdlfirst.cxf.examples.notsoclever.cc/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:findAllOrders>\r
+         <!--Optional:-->\r
+         <ser:arg0>?</ser:arg0>\r
+      </ser:findAllOrders>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:wsaConfig action="http://server.wsdlfirst.cxf.examples.notsoclever.cc/ApiGatewayPortType/findAllOrders" mustUnderstand="NONE" version="200508"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="c8ed8b4f-80a5-4d90-9473-d053e0379fef" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="saveOrder TestCase" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="request" id="345ca236-d58a-4c0c-8924-6a2ed75b71a1" name="saveOrder">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>ApiGatewaySoapBinding</con:interface>
+          <con:operation>saveOrder</con:operation>
+          <con:request name="saveOrder" id="e9eeacdf-da2c-45f8-9f6d-abd809c9c1b6">
+            <con:settings/>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost:8092/service/apigateway</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://server.wsdlfirst.cxf.examples.notsoclever.cc/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:saveOrder>\r
+         <!--Optional:-->\r
+         <ser:arg0>\r
+            <amount>?</amount>\r
+            <!--Optional:-->\r
+            <book>\r
+               <!--Optional:-->\r
+               <description>?</description>\r
+               <id>?</id>\r
+               <!--Optional:-->\r
+               <item>?</item>\r
+            </book>\r
+            <id>?</id>\r
+            <processed>?</processed>\r
+         </ser:arg0>\r
+      </ser:saveOrder>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:wsaConfig action="http://server.wsdlfirst.cxf.examples.notsoclever.cc/ApiGatewayPortType/saveOrder"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// def token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// def token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// def headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>

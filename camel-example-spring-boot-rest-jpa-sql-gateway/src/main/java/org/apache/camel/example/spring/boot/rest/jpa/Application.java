@@ -16,6 +16,8 @@
  */
 package org.apache.camel.example.spring.boot.rest.jpa;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.rest.RestBindingMode;
 import org.h2.server.web.WebServlet;
@@ -36,8 +38,11 @@ public class Application extends SpringBootServletInitializer {
     //h2 console
     //JDBC URL: jdbc:h2:mem:testdb
     //http://localhost:8091/console
-    //http://localhost:8091/camel-rest-jpa/books/order/5
+    //http://localhost:8091/camel-rest-jpa/books/
     
+    //{"id":5,"amount":2,"book":{"id":1,"item":"Camel","description":"Camel in Action"},"processed":true}
+    
+    //This servlet is for h2 console : http://localhost:8091/console
     @Bean
     ServletRegistrationBean h2servletRegistration(){
         ServletRegistrationBean registrationBean = new ServletRegistrationBean( new WebServlet());
@@ -61,14 +66,24 @@ public class Application extends SpringBootServletInitializer {
             rest("/books").description("Books REST service")
                 .get("/").description("The list of all the books")
                     .route().routeId("books-api")
-                    .bean(Database.class, "findBooks")
+                    .log("find invoked******${body}")
+                    .to("sql:select id,amount from orders?" +
+                            "dataSource=dataSource&" +
+                            "outputClass=org.apache.camel.example.spring.boot.rest.jpa.Order")
                     .endRest()
+            	.post("/order").consumes("application/json").type(Order.class)  
+            	
+            	.to("jpa:org.apache.camel.example.spring.boot.rest.jpa.Order");
+            
+                    /*
                 .get("order/{id}").description("Details of an order by id")
                     .route().routeId("order-api")
                     .bean(Database.class, "findOrder(${header.id})");
+                    */
         }
     }
 
+    /*
     @Component
     class Backend extends RouteBuilder {
 
@@ -89,5 +104,5 @@ public class Application extends SpringBootServletInitializer {
                 .routeId("process-order")
                 .log("Processed order #id ${body.id} with ${body.amount} copies of the «${body.book.description}» book and processed status -- ${body.processed} ");
         }
-    }
+    }*/
 }
