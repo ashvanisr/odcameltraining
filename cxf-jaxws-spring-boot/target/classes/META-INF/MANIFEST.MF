@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: cxf-jaxws-spring-boot
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Training
+Implementation-Vendor-Id: com.codenotfound
+Build-Jdk: 1.8.0_121
+Implementation-URL: https://www.codenotfound.com/apache-cxf-spring-boo
+ t-soap-web-service-client-server-example.html
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
