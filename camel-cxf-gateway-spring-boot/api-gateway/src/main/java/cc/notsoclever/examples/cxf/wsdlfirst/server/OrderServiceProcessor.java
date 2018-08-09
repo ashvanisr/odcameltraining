@@ -28,6 +28,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.util.List;
 
 public class OrderServiceProcessor implements Processor {
@@ -51,10 +54,29 @@ public class OrderServiceProcessor implements Processor {
             
         //    exchange.getOut().setBody(new Object[] {customers});
         } else if ("findAllOrders".equals(operationName)) {
+        	
         	String inRestMessage = inMessage.getBody(String.class);
             LOG.info("Process called with: findAllOrders " + inRestMessage);
             
+            
             LOG.info("findAllOrders called");
+            
+            ObjectMapper mapper = new ObjectMapper();
+            List<Order> myObjects = mapper.readValue(inRestMessage, new TypeReference<List<Order>>(){});
+            
+           // Order[] myObjects = mapper.readValue(inRestMessage, Order[].class);
+            
+            for (Order order : myObjects) {
+            	LOG.info("Order in loop called" + order.getId());
+            	LOG.info("Order in loop called" + order.getAmount());
+			}
+            
+            //inMessage.setBody(myObjects);
+            exchange.getOut().setBody(new Object[] {myObjects});
+            
+        	
+        	//Order order = new Order();
+        	//order.set
             //Customer customer = inMessage.getBody(Customer.class);
             //customer = customerService.updateCustomer(customer);
             //exchange.getOut().setBody(customer);

@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.camel.Exchange;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.cxf.common.message.CxfConstants;
+import org.apache.camel.component.jackson.JacksonDataFormat;
 import org.apache.camel.model.dataformat.JsonLibrary;
 import org.apache.camel.model.rest.RestBindingMode;
 import org.slf4j.Logger;
@@ -32,6 +33,9 @@ public class Application extends RouteBuilder {
     	 //restConfiguration().host("localhost").port(8091);
          
     	 restConfiguration().producerComponent("http4");
+    	 JacksonDataFormat order= new JacksonDataFormat(Order.class);
+    	 JacksonDataFormat orderList= new JacksonDataFormat(Order.class);
+    	 orderList.useList();
     	 
     	
         from("cxf:bean:orderServiceEndpoint")
@@ -49,15 +53,19 @@ public class Application extends RouteBuilder {
         .when(header(CxfConstants.OPERATION_NAME).isEqualTo("saveOrder"))
             .setHeader(Exchange.HTTP_METHOD, constant("POST")).
             setHeader(Exchange.CONTENT_TYPE, constant("application/json"))
-            .to("OrderServiceProcessor");
-            //.to("http4://localhost:8091/camel-rest-jpa/books/order?bridgeEndpoint=true")
-            //.to("direct:post");
+            //.to("OrderServiceProcessor")
+            .marshal().json(JsonLibrary.Jackson,Order.class)
+            .to("log:saveOrder?level=INFO&showAll=true")       
+            .to("http4://localhost:8091/camel-rest-jpa/books/order?bridgeEndpoint=true")
+            .to("direct:post");
         	//.to("rest:post:http://localhost:8091/camel-rest-jpa/books/order");
         from("direct:get")
         //.convertBodyTo(String.class)
         .to("log:findAllBooks****${body}")
-        //.to("OrderServiceProcessor");
-        .unmarshal().json(JsonLibrary.Jackson,Order[].class);
+        .to("OrderServiceProcessor");
+       // .unmarshal().json(JsonLibrary.Jackson,Order[].class);
+      //  .unmarshal(orderList);
+        
         
         from("direct:post")
         .to("log:saveBooks****${body}")

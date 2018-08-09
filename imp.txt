@@ -9,3 +9,8 @@ http://www.javainuse.com/camel/camelTest
 
 SpringBoot Test example:
 http://camel.apache.org/spring-boot.html
+
+
+MDC Logging:
+
+http://blog.nanthrax.net/?p=688

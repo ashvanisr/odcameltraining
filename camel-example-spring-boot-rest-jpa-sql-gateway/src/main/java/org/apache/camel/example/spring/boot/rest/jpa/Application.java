@@ -18,6 +18,8 @@ package org.apache.camel.example.spring.boot.rest.jpa;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
+import org.apache.camel.Exchange;
+import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.rest.RestBindingMode;
 import org.h2.server.web.WebServlet;
@@ -55,6 +57,8 @@ public class Application extends SpringBootServletInitializer {
 
         @Override
         public void configure() {
+        	
+        System.out.println("spring boot for rest route started******");
             restConfiguration()
                 .contextPath("/camel-rest-jpa").apiContextPath("/api-doc")
                     .apiProperty("api.title", "Camel REST API")
@@ -71,8 +75,22 @@ public class Application extends SpringBootServletInitializer {
                             "dataSource=dataSource&" +
                             "outputClass=org.apache.camel.example.spring.boot.rest.jpa.Order")
                     .endRest()
-            	.post("/order").consumes("application/json").type(Order.class)  
-            	
+                    
+            	.post("/order").consumes("application/json").type(Order.class).outType(Order.class).route().tracing()          	
+            	.doTry()
+            	.to("OrderServiceProcessor")
+            	.doCatch(Exception.class).process(new Processor() {
+					public void process(Exchange exchange) throws Exception {
+						System.out.println("save payload");
+						String order = exchange.getIn().getBody(String.class);
+						System.out.println("saveOrder called with: " + order);
+				        
+						Exception cause = exchange.getProperty(Exchange.EXCEPTION_CAUGHT, Exception.class);
+						System.out.println(cause);
+					}})
+            	.to("log:save Invoked?level=DEBUG&showAll=true")
+            	.to("log:saveOrder?level=INFO&showAll=true")          	
+            	.to("log:saveOrderAfter?level=INFO&showAll=true")
             	.to("jpa:org.apache.camel.example.spring.boot.rest.jpa.Order");
             
                     /*
