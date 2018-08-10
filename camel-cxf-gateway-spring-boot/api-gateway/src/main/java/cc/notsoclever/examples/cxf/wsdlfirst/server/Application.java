@@ -57,8 +57,20 @@ public class Application extends RouteBuilder {
             .marshal().json(JsonLibrary.Jackson,Order.class)
             .to("log:saveOrder?level=INFO&showAll=true")       
             .to("http4://localhost:8091/camel-rest-jpa/books/order?bridgeEndpoint=true")
-            .to("direct:post");
+            .to("direct:post")
         	//.to("rest:post:http://localhost:8091/camel-rest-jpa/books/order");
+        
+        .when(header(CxfConstants.OPERATION_NAME).isEqualTo("putOrder"))
+        .setHeader(Exchange.HTTP_METHOD, constant("PUT")).
+        setHeader(Exchange.CONTENT_TYPE, constant("application/json"))
+        //.to("OrderServiceProcessor")
+        .marshal().json(JsonLibrary.Jackson,Order.class)
+        .convertBodyTo(String.class)
+        .to("log:putOrder?level=INFO&showAll=true")       
+        .to("http4://localhost:8093/camel-rest-jms/books/order?bridgeEndpoint=true")
+        .to("direct:put");
+        
+        
         from("direct:get")
         //.convertBodyTo(String.class)
         .to("log:findAllBooks****${body}")
@@ -70,6 +82,11 @@ public class Application extends RouteBuilder {
         from("direct:post")
         .to("log:saveBooks****${body}")
         .unmarshal().json(JsonLibrary.Jackson, Order.class);
+        
+        from("direct:put")
+        .to("log:putOrder?level=INFO&showAll=true")
+        .convertBodyTo(String.class);
+        
         
     }
 }

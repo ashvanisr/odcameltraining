@@ -1,0 +1,86 @@
+URL: http://localhost:8092/service/apigateway
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://server.wsdlfirst.cxf.examples.notsoclever.cc/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:findAllOrders>
+         <!--Optional:-->
+         <ser:arg0>12</ser:arg0>
+      </ser:findAllOrders>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+Response:
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <ns1:findAllOrdersResponse xmlns:ns1="http://server.wsdlfirst.cxf.examples.notsoclever.cc/">
+         <ns2:return xmlns:ns2="http://server.wsdlfirst.cxf.examples.notsoclever.cc/">
+            <amount>3000</amount>
+            <id>1</id>
+            <processed>false</processed>
+         </ns2:return>
+         <ns2:return xmlns:ns2="http://server.wsdlfirst.cxf.examples.notsoclever.cc/">
+            <amount>5000</amount>
+            <id>2</id>
+            <processed>false</processed>
+         </ns2:return>
+      </ns1:findAllOrdersResponse>
+   </soap:Body>
+</soap:Envelope>
+
+*******************************************************************************************
+http://localhost:8091/camel-rest-jpa/books/order
+
+POST:
+{"id":40,
+"amount":1200,
+"book":{"id":1,"item":"Camel","description":"Camel in Action"},
+"processed":true}
+
+Response:
+{
+   "id" : 1,
+   "amount" : 1200,
+   "book" : {
+      "id" : 1,
+      "item" : "Camel",
+      "description" : "Camel in Action"
+   },
+   "processed" : true
+}
+********************************************************************************************
+
+http://localhost:8091/camel-rest-jpa/books/
+GET:
+
+Response:
+[
+   {
+      "id" : 1,
+      "amount" : 1800,
+      "book" : null,
+      "processed" : false
+   }
+]
+***********************************************************************************************
+PUT
+http://localhost:8093/camel-rest-jms/books/order
+
+{"id":1,
+"amount":1800,
+"book":{"id":1,"item":"Camel","description":"Camel in Action"},
+"processed":false}
+
+HTTP/1.1 200 
+accept-encoding: gzip,deflate
+breadcrumbId: ID-TRD-109-1533914487785-0-5
+user-agent: Apache-HttpClient/4.5.2 (Java/1.8.0_162)
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Fri, 10 Aug 2018 15:38:37 GMT
+
+status:{"OK"}
+***********************************************************************************
+
+

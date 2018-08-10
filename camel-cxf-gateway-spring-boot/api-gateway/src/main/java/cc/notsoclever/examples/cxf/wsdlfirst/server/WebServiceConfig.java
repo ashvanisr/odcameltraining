@@ -46,6 +46,10 @@ public class WebServiceConfig {
     //	cxfEndpoint.setServiceNameString("s:customer:apiGatewayService");
     	cxfEndpoint.setServiceClass(ApiGateway.class);
     //	cxfEndpoint.setDefaultOperationNamespace("http://apache.org/hello_world_soap_http");
+    	
+    	/*
+    	 * Uncommenting below lines will not display wsdl..
+    	 */
     	//cxfEndpoint.setBus(bus);
         return cxfEndpoint;
     }

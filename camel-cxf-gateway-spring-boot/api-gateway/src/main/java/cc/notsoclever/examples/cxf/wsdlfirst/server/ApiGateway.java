@@ -8,5 +8,5 @@ public interface ApiGateway {
 	
     Order saveOrder(Order input);
     List<Order> findAllOrders(String order);
-
+    String putOrder(Order input);
 }

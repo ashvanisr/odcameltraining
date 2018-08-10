@@ -30,7 +30,9 @@ import org.springframework.stereotype.Component;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Component("OrderServiceProcessor")
 public class OrderServiceProcessor implements Processor {
@@ -44,9 +46,17 @@ public class OrderServiceProcessor implements Processor {
     public void process(Exchange exchange) throws Exception {
         Message inMessage = exchange.getIn();
         LOG.info("saveOrderProcessor **********************: ");
-        
+        /*
+         * order json is array.This might be because of restjson binding mode is json.
+         * It can be corrected by removing type and convertbody to string..
+         * refer to rest-jms-gateway project that is working fine when turning off json binding mode and convertbody to string
+         * 
+         */
         String order = inMessage.getBody(String.class);
         LOG.info("saveOrderProcessor called with: " + order);
+        
+        
+        
         
         ObjectMapper mapper = new ObjectMapper();
         List<Order> myObjects = mapper.readValue(order, new TypeReference<List<Order>>(){});

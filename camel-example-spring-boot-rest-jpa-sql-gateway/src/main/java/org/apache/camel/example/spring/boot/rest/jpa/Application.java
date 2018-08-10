@@ -16,11 +16,12 @@
  */
 package org.apache.camel.example.spring.boot.rest.jpa;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.component.jackson.JacksonDataFormat;
+import org.apache.camel.model.dataformat.JsonLibrary;
 import org.apache.camel.model.rest.RestBindingMode;
 import org.h2.server.web.WebServlet;
 import org.springframework.boot.SpringApplication;
@@ -29,6 +30,12 @@ import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.JsonParser;
+
+
+
 
 
 @SpringBootApplication
@@ -58,6 +65,11 @@ public class Application extends SpringBootServletInitializer {
         @Override
         public void configure() {
         	
+        	JacksonDataFormat orderJacksonDataFormat = new JacksonDataFormat(Order.class);
+        	ObjectMapper objectMapper = new ObjectMapper();
+        	objectMapper.configure(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES, true);
+        	orderJacksonDataFormat.setObjectMapper(objectMapper);
+        	
         System.out.println("spring boot for rest route started******");
             restConfiguration()
                 .contextPath("/camel-rest-jpa").apiContextPath("/api-doc")
@@ -71,7 +83,8 @@ public class Application extends SpringBootServletInitializer {
                 .get("/").description("The list of all the books")
                     .route().routeId("books-api")
                     .log("find invoked******${body}")
-                    .to("sql:select id,amount from orders?" +
+                    .to("log:findInvoked?level=INFO&showAll=true")
+                    .to("sql:select id,amount,processed from orders?" +
                             "dataSource=dataSource&" +
                             "outputClass=org.apache.camel.example.spring.boot.rest.jpa.Order")
                     .endRest()
@@ -98,6 +111,33 @@ public class Application extends SpringBootServletInitializer {
                     .route().routeId("order-api")
                     .bean(Database.class, "findOrder(${header.id})");
                     */
+            
+            	from("activemq:order")
+            	.routeId("orderdequeue")
+            	.convertBodyTo(String.class)
+            	.routeId("orderconvertstring")
+            	.to("log:updatePUTOrder?level=INFO&showAll=true")
+            	.doTry()
+            		.unmarshal(orderJacksonDataFormat)
+            	.doCatch(Exception.class).process(new Processor() {
+					public void process(Exchange exchange) throws Exception {
+						System.out.println("put payload");
+						String order = exchange.getIn().getBody(String.class);
+						System.out.println("putOrder called with: " + order);
+					}})
+            	.routeId("orderunmarshal")
+            	.to("log:updatePUT_MarshallOrder?level=INFO&showAll=true")
+            	.routeId("orderunServiceProcessor")
+            	.to("OrderUpdateServiceProcessor")
+            	.to("log:updatePUT_HASHMAP_Order?level=INFO&showAll=true")
+            	//.to("sql:update orders set amount=${body.amount},processed=${body.processed} where id=${body.id} ?" +
+                    //    "dataSource=dataSource")
+            	//
+            	
+            	.to("sql:update orders set amount=:#amount,processed=:#processed where id=:#id ?" +
+                        "dataSource=dataSource")
+            	.to("log:updatePUT_Final?level=INFO&showAll=true");
+            	
         }
     }
 

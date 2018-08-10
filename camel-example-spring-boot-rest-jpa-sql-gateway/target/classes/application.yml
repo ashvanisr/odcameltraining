@@ -33,7 +33,9 @@ spring:
   #h2:
    # console:
     #  enabled: true
-
+  activemq:
+    broker-url: tcp://localhost:61616
+    
 # The application configuration properties
 example:
   generateOrderPeriod: 2s
