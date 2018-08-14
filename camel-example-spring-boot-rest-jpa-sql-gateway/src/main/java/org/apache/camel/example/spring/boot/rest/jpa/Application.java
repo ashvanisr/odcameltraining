@@ -17,13 +17,16 @@
 package org.apache.camel.example.spring.boot.rest.jpa;
 
 
+import org.apache.camel.CamelContext;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.jackson.JacksonDataFormat;
+import org.apache.camel.impl.DefaultCamelContext;
 import org.apache.camel.model.dataformat.JsonLibrary;
 import org.apache.camel.model.rest.RestBindingMode;
 import org.h2.server.web.WebServlet;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -42,28 +45,43 @@ import com.fasterxml.jackson.core.JsonParser;
 public class Application extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
+    	
         SpringApplication.run(Application.class, args);
     }
     //h2 console
-    //JDBC URL: jdbc:h2:mem:testdb
-    //http://localhost:8091/console
+    //JDBC URL: jdbc:h2:mem:testdb username: sa password:
+    //h2 server mode: jdbc url: jdbc:h2:~/testdb
+    
+    // h2 server console: http://192.168.252.186:8082
+    	
+    //embedded h2 console url: http://localhost:8091/console
     //http://localhost:8091/camel-rest-jpa/books/
     
     //{"id":5,"amount":2,"book":{"id":1,"item":"Camel","description":"Camel in Action"},"processed":true}
     
     //This servlet is for h2 console : http://localhost:8091/console
+    /*
     @Bean
     ServletRegistrationBean h2servletRegistration(){
         ServletRegistrationBean registrationBean = new ServletRegistrationBean( new WebServlet());
         registrationBean.addUrlMappings("/console/*");
         return registrationBean;
-    }
+    }*/
+    
+    @Autowired
+    CamelContext context;
     
     @Component
     class RestApi extends RouteBuilder {
+    	
+    	
+    
 
         @Override
         public void configure() {
+        	
+        	context.setUseMDCLogging(true);
+        	context.setTracing(true);
         	
         	JacksonDataFormat orderJacksonDataFormat = new JacksonDataFormat(Order.class);
         	ObjectMapper objectMapper = new ObjectMapper();

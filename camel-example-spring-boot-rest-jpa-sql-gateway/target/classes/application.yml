@@ -29,7 +29,9 @@ spring:
   # Spring JDBC configuration
   datasource:
     # Let Spring Boot auto-configure an embedded HSQL database
-    url:
+    url: jdbc:h2:tcp://192.168.252.186/~/testdb;AUTO_SERVER=TRUE
+    username: sa
+    password:
   #h2:
    # console:
     #  enabled: true

@@ -1,0 +1,78 @@
+[33mcommit f6da4e70b2001b998e691bc0e591b55da753b77f[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: ashvani <ashvanisrivastava28@gmail.com>
+Date:   Fri Aug 10 17:28:15 2018 +0000
+
+    Project task to soap gateway,rest,jms,jpa,sql completed
+
+[33mcommit 33324ce72a2b0fb772a883dce26031f16cfdf079[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: ashvani <ashvanisrivastava28@gmail.com>
+Date:   Thu Aug 9 12:24:12 2018 +0000
+
+    gateway with sql jpa success
+
+[33mcommit 2240b6b5e3a00249c2b3abac51135cb9fd2b3fa5[m
+Author: ashvani <ashvanisrivastava28@gmail.com>
+Date:   Wed Aug 8 14:15:21 2018 +0000
+
+    gateway
+
+[33mcommit 273a7554ff111f30f16d30a01a4cc251a7d57a9f[m[33m ([m[1;33mtag: cameltraining_jpa_sql_v1[m[33m)[m
+Author: ashvani <ashvanisrivastava28@gmail.com>
+Date:   Wed Aug 8 06:08:57 2018 +0000
+
+    Jpa and Sql
+
+[33mcommit 0da918698c000347b0efdc432d6f83884a2f1381[m[33m ([m[1;33mtag: camel_cxf_springboot_working_v1[m[33m)[m
+Author: shivangi <shivangisharma0812@gmail.com>
+Date:   Fri Aug 3 12:17:28 2018 +0530
+
+    cxf
+
+[33mcommit 0857d33be0361b7ec558121e6895b76c86704654[m
+Author: shivangi <shivangisharma0812@gmail.com>
+Date:   Fri Aug 3 12:15:21 2018 +0530
+
+    cxf changes
+
+[33mcommit 95ae2b3c3c817a15678c43c2491d3b6ac046f82a[m
+Author: shivangi <shivangisharma0812@gmail.com>
+Date:   Fri Aug 3 11:58:09 2018 +0530
+
+    cxf integration
+
+[33mcommit 4c68497d81da456640bd580341a3fb1af6eb3b51[m[33m ([m[1;33mtag: camel_training_soap_v2[m[33m)[m
+Author: shivangi <shivangisharma0812@gmail.com>
+Date:   Fri Aug 3 11:15:09 2018 +0530
+
+    cxf integration
+
+[33mcommit 03e7d8d5c2ff2bdad93e25f69e79fd8ce688572c[m[33m ([m[1;33mtag: camel_training_soap_v1[m[33m, [m[1;33mtag: camel_training_restdsl_springboot_v1[m[33m)[m
+Author: shivangi <shivangisharma0812@gmail.com>
+Date:   Tue Jul 31 17:28:44 2018 +0530
+
+    taking back up
+
+[33mcommit d035b08a0eb47601f8c1aa59983acaa119b9ed58[m[33m ([m[1;33mtag: camel_training_withoutspringboot_v1[m[33m)[m
+Author: shivangi <shivangisharma0812@gmail.com>
+Date:   Tue Jul 31 12:38:39 2018 +0530
+
+    modified git commands
+
+[33mcommit 4015418b3b15fef0441b5e74e4040cec0a2f7afd[m
+Merge: 348821f 93908ae
+Author: shivangi <shivangisharma0812@gmail.com>
+Date:   Tue Jul 31 12:32:11 2018 +0530
+
+    Merge branch 'master' of https://github.com/ashvanisr/odcameltraining
+
+[33mcommit 348821f490dcd3c5296662dea1d4ae16db8172b7[m
+Author: shivangi <shivangisharma0812@gmail.com>
+Date:   Tue Jul 31 12:25:26 2018 +0530
+
+    commit to github
+
+[33mcommit 93908aed9550445a2b167d1af8baeea98065528b[m
+Author: Ashvani Shrivastava <ASHVANI.SHRIVASTAVA@niit-tech.com>
+Date:   Mon Jul 30 18:17:43 2018 +0530
+
+    first commit

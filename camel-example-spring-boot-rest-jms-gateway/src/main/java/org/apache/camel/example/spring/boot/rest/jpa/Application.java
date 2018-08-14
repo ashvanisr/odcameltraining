@@ -18,12 +18,14 @@ package org.apache.camel.example.spring.boot.rest.jpa;
 
 
 
+import org.apache.camel.CamelContext;
 import org.apache.camel.Exchange;
 import org.apache.camel.ExchangePattern;
 import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.rest.RestBindingMode;
 import org.h2.server.web.WebServlet;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -48,18 +50,25 @@ public class Application extends SpringBootServletInitializer {
     //{"id":5,"amount":2,"book":{"id":1,"item":"Camel","description":"Camel in Action"},"processed":true}
     
     //This servlet is for h2 console : http://localhost:8091/console
+    /*
     @Bean
     ServletRegistrationBean h2servletRegistration(){
         ServletRegistrationBean registrationBean = new ServletRegistrationBean( new WebServlet());
         registrationBean.addUrlMappings("/console/*");
         return registrationBean;
-    }
+    }*/
+    
+    @Autowired
+    CamelContext context;
     
     @Component
     class RestApi extends RouteBuilder {
 
         @Override
         public void configure() {
+        	
+        	context.setUseMDCLogging(true);
+        	context.setTracing(true);
         	
         System.out.println("spring boot for rest JMS route started******");
             restConfiguration()
