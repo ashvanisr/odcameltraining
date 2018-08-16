@@ -33,6 +33,8 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
+import static org.apache.camel.model.rest.RestParamType.body;
+
 
 @SpringBootApplication
 public class Application extends SpringBootServletInitializer {
@@ -49,7 +51,7 @@ public class Application extends SpringBootServletInitializer {
     
     //{"id":5,"amount":2,"book":{"id":1,"item":"Camel","description":"Camel in Action"},"processed":true}
     
-    //This servlet is for h2 console : http://localhost:8091/console
+    //This servlet is for h2 console : http://localhost:8093/console
     /*
     @Bean
     ServletRegistrationBean h2servletRegistration(){
@@ -73,7 +75,9 @@ public class Application extends SpringBootServletInitializer {
         System.out.println("spring boot for rest JMS route started******");
             restConfiguration()
                 .contextPath("/camel-rest-jms").apiContextPath("/api-doc")
-                    .apiProperty("api.title", "Camel REST Gateway JMS API")
+                .apiProperty("host", "localhost:8093") //by default 0.0.0.0
+                .apiProperty("base.path", "camel-rest-jms")
+                    .apiProperty("api.title", "Camel REST Gateway Update Order API")
                     .apiProperty("api.version", "1.0")
                     .apiProperty("cors", "true")
                     .apiContextRouteId("doc-api");
@@ -85,9 +89,14 @@ public class Application extends SpringBootServletInitializer {
             rest("/books").description("Books REST service")
                 
                     
-            	.put("/order")
+            	.put("/order").description("Book Order PUT (Update) REST service")
             	.consumes("application/json")
+            	//.type(String.class)
             	.outType(String.class)
+            	.param().name("body").type(body).description("The order to update {\"id\":1,\r\n" + 
+            			"\"amount\":1800,\r\n" + 
+            			"\"book\":{\"id\":1,\"item\":\"Camel\",\"description\":\"Camel in Action\"},\r\n" + 
+            			"\"processed\":false}").endParam()
             	.route()
             	.setExchangePattern(ExchangePattern.InOnly)
             	.convertBodyTo(String.class)
@@ -108,7 +117,7 @@ public class Application extends SpringBootServletInitializer {
             	
             	.to("log:saveOrderJMS?level=INFO&showAll=true")
             	.to("activemq:order")
-            	.setBody(simple("status:{\"OK\"}"));
+            	.setBody(simple("{\"status\":\"OK\"}"));
             
                     /*
                 .get("order/{id}").description("Details of an order by id")

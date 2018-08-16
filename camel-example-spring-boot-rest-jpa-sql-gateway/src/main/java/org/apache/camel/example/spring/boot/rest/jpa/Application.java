@@ -91,6 +91,8 @@ public class Application extends SpringBootServletInitializer {
         System.out.println("spring boot for rest route started******");
             restConfiguration()
                 .contextPath("/camel-rest-jpa").apiContextPath("/api-doc")
+                .apiProperty("host", "localhost:8091") //by default 0.0.0.0
+                .apiProperty("base.path", "camel-rest-jpa")
                     .apiProperty("api.title", "Camel REST API")
                     .apiProperty("api.version", "1.0")
                     .apiProperty("cors", "true")
@@ -105,8 +107,13 @@ public class Application extends SpringBootServletInitializer {
                     .to("sql:select id,amount,processed from orders?" +
                             "dataSource=dataSource&" +
                             "outputClass=org.apache.camel.example.spring.boot.rest.jpa.Order")
-                    .endRest()
-                    
+                    .endRest();
+                 
+                 /**
+                  * post start
+                  * 
+                  */
+                    /*
             	.post("/order").consumes("application/json").type(Order.class).outType(Order.class).route().tracing()          	
             	.doTry()
             	.to("OrderServiceProcessor")
@@ -123,13 +130,21 @@ public class Application extends SpringBootServletInitializer {
             	.to("log:saveOrder?level=INFO&showAll=true")          	
             	.to("log:saveOrderAfter?level=INFO&showAll=true")
             	.to("jpa:org.apache.camel.example.spring.boot.rest.jpa.Order");
-            
+            	*/
+                    
+            	/*
+            	 * Post end here****************************************
+            	 */
+            	
                     /*
                 .get("order/{id}").description("Details of an order by id")
                     .route().routeId("order-api")
                     .bean(Database.class, "findOrder(${header.id})");
                     */
-            
+                /*
+                 * PUT order****************************************
+                 */
+                /*
             	from("activemq:order")
             	.routeId("orderdequeue")
             	.convertBodyTo(String.class)
@@ -155,6 +170,7 @@ public class Application extends SpringBootServletInitializer {
             	.to("sql:update orders set amount=:#amount,processed=:#processed where id=:#id ?" +
                         "dataSource=dataSource")
             	.to("log:updatePUT_Final?level=INFO&showAll=true");
+            	*/
             	
         }
     }

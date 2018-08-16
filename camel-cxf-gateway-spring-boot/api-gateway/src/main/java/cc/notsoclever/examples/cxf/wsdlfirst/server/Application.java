@@ -56,7 +56,7 @@ public class Application extends RouteBuilder {
             //.to("OrderServiceProcessor")
             .marshal().json(JsonLibrary.Jackson,Order.class)
             .to("log:saveOrder?level=INFO&showAll=true")       
-            .to("http4://localhost:8091/camel-rest-jpa/books/order?bridgeEndpoint=true")
+            .to("http4://localhost:8095/camel-rest-jpa/books/order?bridgeEndpoint=true")
             .to("direct:post")
         	//.to("rest:post:http://localhost:8091/camel-rest-jpa/books/order");
         
