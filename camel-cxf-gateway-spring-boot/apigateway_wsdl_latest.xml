@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://server.wsdlfirst.cxf.examples.notsoclever.cc/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="ApiGateway" targetNamespace="http://server.wsdlfirst.cxf.examples.notsoclever.cc/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://server.wsdlfirst.cxf.examples.notsoclever.cc/" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://server.wsdlfirst.cxf.examples.notsoclever.cc/">
+  <xs:complexType name="order">
+    <xs:sequence>
+      <xs:element name="amount" type="xs:int"/>
+      <xs:element minOccurs="0" name="book" type="tns:book"/>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element name="processed" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="book">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="description" type="xs:string"/>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element minOccurs="0" name="item" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="findAllOrders" type="tns:findAllOrders"/>
+  <xs:complexType name="findAllOrders">
+    <xs:sequence>
+      <xs:element form="qualified" minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="findAllOrdersResponse" type="tns:findAllOrdersResponse"/>
+  <xs:complexType name="findAllOrdersResponse">
+    <xs:sequence>
+      <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="return" type="tns:order"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="saveOrder" type="tns:saveOrder"/>
+  <xs:complexType name="saveOrder">
+    <xs:sequence>
+      <xs:element form="qualified" minOccurs="0" name="arg0" type="tns:order"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="saveOrderResponse" type="tns:saveOrderResponse"/>
+  <xs:complexType name="saveOrderResponse">
+    <xs:sequence>
+      <xs:element form="qualified" minOccurs="0" name="return" type="tns:order"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="putOrder" type="tns:putOrder"/>
+  <xs:complexType name="putOrder">
+    <xs:sequence>
+      <xs:element form="qualified" minOccurs="0" name="arg0" type="tns:order"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="putOrderResponse" type="tns:putOrderResponse"/>
+  <xs:complexType name="putOrderResponse">
+    <xs:sequence>
+      <xs:element form="qualified" minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="saveOrderResponse">
+    <wsdl:part element="tns:saveOrderResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="putOrderResponse">
+    <wsdl:part element="tns:putOrderResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findAllOrders">
+    <wsdl:part element="tns:findAllOrders" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveOrder">
+    <wsdl:part element="tns:saveOrder" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findAllOrdersResponse">
+    <wsdl:part element="tns:findAllOrdersResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="putOrder">
+    <wsdl:part element="tns:putOrder" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ApiGatewayPortType">
+    <wsdl:operation name="findAllOrders">
+      <wsdl:input message="tns:findAllOrders" name="findAllOrders">
+    </wsdl:input>
+      <wsdl:output message="tns:findAllOrdersResponse" name="findAllOrdersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveOrder">
+      <wsdl:input message="tns:saveOrder" name="saveOrder">
+    </wsdl:input>
+      <wsdl:output message="tns:saveOrderResponse" name="saveOrderResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="putOrder">
+      <wsdl:input message="tns:putOrder" name="putOrder">
+    </wsdl:input>
+      <wsdl:output message="tns:putOrderResponse" name="putOrderResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ApiGatewaySoapBinding" type="tns:ApiGatewayPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="findAllOrders">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findAllOrders">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findAllOrdersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveOrder">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="saveOrder">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="saveOrderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="putOrder">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="putOrder">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="putOrderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ApiGateway">
+    <wsdl:port binding="tns:ApiGatewaySoapBinding" name="ApiGatewayPort">
+      <soap:address location="http://localhost:8092/service/apigateway"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

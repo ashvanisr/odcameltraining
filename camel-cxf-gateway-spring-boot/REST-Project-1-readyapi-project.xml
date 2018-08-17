@@ -35,13 +35,61 @@
           <con:params/>
           <con:element xmlns:ord="http://localhost/camel-rest-jpa/books/order">ord:Response</con:element>
         </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element xmlns:ord="http://localhost/camel-rest-jpa/books/order">ord:Fault</con:element>
+        </con:representation>
         <con:request name="Request 1" id="7fe3dac4-17d7-4ff3-b6e3-521fab4ddf5e" mediaType="application/json" postQueryString="false">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
           </con:settings>
-          <con:endpoint>http://localhost:8091</con:endpoint>
-          <con:request>{"id":6,
-"amount":500,
+          <con:endpoint>http://localhost:8095</con:endpoint>
+          <con:request>{"id":44,
+"amount":1500,
+"book":{"id":1,"item":"Camel","description":"Camel in Action"},
+"processed":true}</con:request>
+          <con:originalUri>http://localhost/camel-rest-jpa/books/order</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+      <con:method name="Method 2" id="94e511c4-f8c0-4f8f-b978-a3f619c7627a" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>405 404</con:status>
+          <con:params/>
+          <con:element xmlns:ord="http://localhost/camel-rest-jpa/books/order">ord:Fault</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>text/plain;charset=ISO-8859-1</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="07c95bd2-339c-4ea2-a908-4817e1c2909a" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8093</con:endpoint>
+          <con:request>{"id":35,
+"amount":1400,
 "book":{"id":1,"item":"Camel","description":"Camel in Action"},
 "processed":true}</con:request>
           <con:originalUri>http://localhost/camel-rest-jpa/books/order</con:originalUri>
@@ -72,6 +120,47 @@
           <con:endpoint>http://localhost:8091</con:endpoint>
           <con:request/>
           <con:originalUri>http://localhost/camel-rest-jpa/books/</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="338bed18-7d99-4519-8938-75f437032bef" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8093" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://localhost:8093</con:endpoint>
+    </con:endpoints>
+    <con:resource name="" path="/camel-rest-jms/books/order" id="64d2a4dc-ea67-4459-a21d-bd659bb23325">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="" id="a5eb2bd0-66b8-44b0-8112-dff99042b8c7" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="7a8b4ce7-e84d-4544-8608-ffcbee22ac04" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8093</con:endpoint>
+          <con:request>{"id":5,
+"amount":2100,
+"book":{"id":1,"item":"Camel","description":"Camel in Action"},
+"processed":false}</con:request>
+          <con:originalUri>http://localhost/camel-rest-jms/books/order</con:originalUri>
           <con:credentials>
             <con:authType>No Authorization</con:authType>
           </con:credentials>

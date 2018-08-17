@@ -17,6 +17,9 @@
 package org.apache.camel.example.spring.boot.rest.jpa;
 
 
+import javax.annotation.PostConstruct;
+import javax.servlet.ServletContext;
+
 import org.apache.camel.CamelContext;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
@@ -35,6 +38,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import io.hawt.config.ConfigFacade;
+import io.hawt.springboot.EnableHawtio;
+import io.hawt.springboot.HawtPlugin;
+import io.hawt.system.ConfigManager;
+import io.hawt.web.AuthenticationFilter;
+
 import com.fasterxml.jackson.core.JsonParser;
 
 
@@ -42,12 +52,52 @@ import com.fasterxml.jackson.core.JsonParser;
 
 
 @SpringBootApplication
+//@EnableHawtio
 public class Application extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
-    	
+    	System.setProperty(AuthenticationFilter.HAWTIO_AUTHENTICATION_ENABLED, "false");
         SpringApplication.run(Application.class, args);
     }
+    /*
+    @Autowired
+	private ServletContext servletContext;
+    
+    
+    @PostConstruct
+	public void init() {
+		final ConfigManager configManager = new ConfigManager();
+		configManager.init();
+		servletContext.setAttribute("ConfigManager", configManager);
+	}
+	
+
+	@Bean
+	public ConfigFacade configFacade() throws Exception {
+		ConfigFacade config = new ConfigFacade() {
+			public boolean isOffline() {
+				return true;
+			}
+		};
+		config.init();
+		return config;
+	}*/
+	
+    /*
+    @Bean
+    public HawtPlugin samplePlugin() {
+        return new HawtPlugin("sample-plugin",
+            "plugins",
+            "",
+            new String[] { "sample-plugin/js/sample-plugin.js" });
+    }
+
+    
+    @Bean
+    public ConfigFacade configFacade() {
+        return ConfigFacade.getSingleton();
+    }*/
+    
     //h2 console
     //JDBC URL: jdbc:h2:mem:testdb username: sa password:
     //h2 server mode: jdbc url: jdbc:h2:~/testdb

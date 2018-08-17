@@ -5,6 +5,7 @@ org\apache\camel\example\spring\boot\rest\jpa\Application.class
 org\apache\camel\example\spring\boot\rest\jpa\Application$RestApi$1.class
 org\apache\camel\example\spring\boot\rest\jpa\OrderRepository.class
 org\apache\camel\example\spring\boot\rest\jpa\Book.class
+org\apache\camel\example\spring\boot\rest\jpa\Application$1.class
 org\apache\camel\example\spring\boot\rest\jpa\Database.class
 org\apache\camel\example\spring\boot\rest\jpa\OrderServiceProcessor.class
 org\apache\camel\example\spring\boot\rest\jpa\Order.class
