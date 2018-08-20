@@ -11,3 +11,29 @@ git push origin camel_training_withoutspringboot_v1
 
 reverting files from git to local:
 git checkout origin/master springboot-camel/pom.xml
+
+**********************************************************************************************
+
+# fetch the changes from the remote
+git fetch origin
+
+# show commit logs of changes
+git log master..origin/master
+
+# show diffs of changes
+git diff master..origin/master
+
+# apply the changes by merge..
+git merge origin/master
+
+
+
+When you think your git is messed up, you can use this command to do everything up-to-date.
+
+git rm -r --cached .
+git add .
+git commit -am 'git cache cleared'
+git push
+Also to revert back last commit use this :
+
+git reset HEAD^ --hard
