@@ -14,3 +14,8 @@ http://camel.apache.org/spring-boot.html
 MDC Logging:
 
 http://blog.nanthrax.net/?p=688
+
+ELK:
+https://www.edureka.co/blog/elk-stack-tutorial/
+
+https://qbox.io/blog/how-to-elasticsearch-logstash-kibana-manage-logs
